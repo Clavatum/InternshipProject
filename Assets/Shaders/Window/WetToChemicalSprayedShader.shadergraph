@@ -479,10 +479,10 @@
     "m_Name": "",
     "m_ChildObjectList": [
         {
-            "m_Id": "cf42c9f698cc4c22bcc9677002eff117"
+            "m_Id": "54a832cb98974d72955f2b6c001bcf09"
         },
         {
-            "m_Id": "54a832cb98974d72955f2b6c001bcf09"
+            "m_Id": "cf42c9f698cc4c22bcc9677002eff117"
         },
         {
             "m_Id": "cb286dcf6d0949bcab8274bf5dcef7a8"
@@ -586,7 +586,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "2f396d411f584af08ae8a09c5331b516",
     "m_Id": 0,
-    "m_DisplayName": "DirtMask",
+    "m_DisplayName": "Mask",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1075,10 +1075,10 @@
     "m_Guid": {
         "m_GuidSerialized": "af6c8915-b4fb-4deb-8c9d-0a8ea41c81ef"
     },
-    "m_Name": "DirtTexture",
+    "m_Name": "StartTexture",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "DirtTexture",
-    "m_DefaultReferenceName": "_DirtTexture",
+    "m_RefNameGeneratedByDisplayName": "StartTexture",
+    "m_DefaultReferenceName": "_StartTexture",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -1089,7 +1089,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"0d9dc4d2f9e567d4d9d8a8bcb28712b8\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"b91ced3c0a9b88444811b7e01354b27d\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -1400,7 +1400,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "72121ebe95cc4318b3136d14cdbbb9d3",
     "m_Id": 0,
-    "m_DisplayName": "MainTexture",
+    "m_DisplayName": "EndTexture",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1700,7 +1700,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "a20ae7317b6240118325e9550413caf2",
     "m_Id": 0,
-    "m_DisplayName": "DirtTexture",
+    "m_DisplayName": "StartTexture",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1842,10 +1842,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 249.33328247070313,
-            "y": 994.0,
-            "width": 209.33346557617188,
-            "height": 304.0
+            "x": 249.3332977294922,
+            "y": 994.0000610351563,
+            "width": 209.33338928222657,
+            "height": 303.99981689453127
         }
     },
     "m_Slots": [
@@ -2124,10 +2124,10 @@
     "m_Guid": {
         "m_GuidSerialized": "22e3718e-7efc-4776-8416-0e9142cff78c"
     },
-    "m_Name": "DirtMask",
+    "m_Name": "Mask",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "DirtMask",
-    "m_DefaultReferenceName": "_DirtMask",
+    "m_RefNameGeneratedByDisplayName": "Mask",
+    "m_DefaultReferenceName": "_Mask",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2138,7 +2138,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"fd37a813f5fb92b46beeaa6298452d84\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"edba9ace686ad794999a64a8301ad0d9\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -2154,10 +2154,10 @@
     "m_Guid": {
         "m_GuidSerialized": "802da606-c5a0-4f27-852d-987d9ccdcb97"
     },
-    "m_Name": "MainTexture",
+    "m_Name": "EndTexture",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "MainTexture",
-    "m_DefaultReferenceName": "_MainTexture",
+    "m_RefNameGeneratedByDisplayName": "EndTexture",
+    "m_DefaultReferenceName": "_EndTexture",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2168,7 +2168,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"074ebec8e05bbfa4197436de11e76860\",\"type\":3}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"c37cba56eee285f4ebeeecaca6f62782\",\"type\":3}}",
         "m_Guid": ""
     },
     "isMainTexture": false,
