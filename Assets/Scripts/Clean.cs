@@ -1,38 +1,25 @@
 using UnityEngine;
+using System.Collections;
 
 public class Clean : MonoBehaviour
 {
     [Header("Brush Settings")]
     [SerializeField] private Texture2D brush;
     [SerializeField][Range(0.1f, 1f)] private float brushStrength = 0.5f;
-
-    [Header("Raycast Settings")]
-    [SerializeField] private Transform rayOrigin;
+    [SerializeField] private float cleaningCooldown = 0.05f;
     [SerializeField] private float rayLength = 0.3f;
 
-    [Header("Performance Settings")]
-    [SerializeField] private int maxCleaningPerFrame = 3;
-    [SerializeField] private float cleaningCooldown = 0.05f;
+    public string ToolName;
+    public bool IsContinuous;
+    [Range(0f, 1f)] public float minCleanliness;
+    [Range(0f, 1f)] public float maxCleanliness;
+    //public AudioClip UseSound;
 
-    [Header("State Control")]
-    [SerializeField] private ToolType currentTool;
-    [SerializeField] private float requiredCleanliness = 0.85f;
-
-    [SerializeField] private bool isEquipped = false;
-
-    private float lastCleaningTime;
-    private int cleaningCountThisFrame;
+    private Coroutine cleaningRoutine;
     private Color[] brushPixels;
     private int brushHalfWidth;
     private int brushHalfHeight;
-
-    public enum ToolType
-    {
-        WaterSpray,
-        ChemicalSpray,
-        Squeegee,
-        Towel
-    }
+    private bool isCleaningActive;
 
     private void Awake()
     {
@@ -44,125 +31,132 @@ public class Clean : MonoBehaviour
         }
     }
 
-    private void Update()
+    public void StartCleaning()
     {
-        cleaningCountThisFrame = 0;
-
-        if (isEquipped && Time.time - lastCleaningTime >= cleaningCooldown)
+        if (IsContinuous)
+        {
+            if (!isCleaningActive)
+            {
+                isCleaningActive = true;
+                cleaningRoutine = StartCoroutine(ContinuousCleaning());
+            }
+        }
+        else
         {
             CleanGlass();
         }
     }
 
-    public void SetEquip(bool equipped)
+    public void StopCleaning()
     {
-        isEquipped = equipped;
+        if (isCleaningActive)
+        {
+            if (cleaningRoutine != null)
+            {
+                StopCoroutine(cleaningRoutine);
+            }
+            isCleaningActive = false;
+        }
     }
 
-    public void SetCurrentTool(ToolType tool)
+    private IEnumerator ContinuousCleaning()
     {
-        currentTool = tool;
+        while (isCleaningActive)
+        {
+            CleanGlass();
+            yield return new WaitForSeconds(cleaningCooldown);
+        }
+    }
+
+    public bool CanUseOnWindow(Window window)
+    {
+        float cleanliness = window.CurrentCleanliness;
+        return cleanliness >= minCleanliness && cleanliness <= maxCleanliness;
     }
 
     private void CleanGlass()
     {
-        if (brush == null || cleaningCountThisFrame >= maxCleaningPerFrame) return;
-
-        if (Physics.Raycast(rayOrigin.position, rayOrigin.forward, out RaycastHit hit, rayLength))
+        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, rayLength))
         {
             Window window = hit.collider.GetComponent<Window>();
             if (window == null || window.TemplateDirtMask == null) return;
 
-            if (!CanUseTool(window))
+            if (!CanUseOnWindow(window) || !window.CanUseTool(this))
             {
-                Debug.Log($"Cannot use {currentTool} in current state");
+                Debug.Log(CanUseOnWindow(window));
                 return;
             }
 
-            Vector2 textureCoord = hit.textureCoord;
-            Texture2D dirtMask = window.TemplateDirtMask;
+            ProcessCleaning(hit, window, this);
+        }
+    }
 
-            int pixelX = (int)(textureCoord.x * dirtMask.width);
-            int pixelY = (int)(textureCoord.y * dirtMask.height);
+    private void ProcessCleaning(RaycastHit hit, Window window, Clean tool)
+    {
+        Debug.Log("cleaning");
+        Vector2 textureCoord = hit.textureCoord;
+        Texture2D dirtMask = window.TemplateDirtMask;
 
-            int startX = Mathf.Clamp(pixelX - brushHalfWidth, 0, dirtMask.width - 1);
-            int startY = Mathf.Clamp(pixelY - brushHalfHeight, 0, dirtMask.height - 1);
-            int endX = Mathf.Clamp(pixelX + brushHalfWidth, 0, dirtMask.width - 1);
-            int endY = Mathf.Clamp(pixelY + brushHalfHeight, 0, dirtMask.height - 1);
+        int pixelX = (int)(textureCoord.x * dirtMask.width);
+        int pixelY = (int)(textureCoord.y * dirtMask.height);
 
-            Color[] dirtPixels = dirtMask.GetPixels(startX, startY, endX - startX + 1, endY - startY + 1);
-            bool pixelsChanged = false;
+        int startX = Mathf.Clamp(pixelX - brushHalfWidth, 0, dirtMask.width - 1);
+        int startY = Mathf.Clamp(pixelY - brushHalfHeight, 0, dirtMask.height - 1);
+        int endX = Mathf.Clamp(pixelX + brushHalfWidth, 0, dirtMask.width - 1);
+        int endY = Mathf.Clamp(pixelY + brushHalfHeight, 0, dirtMask.height - 1);
 
-            for (int y = startY; y <= endY; y++)
+        Color[] dirtPixels = dirtMask.GetPixels(startX, startY, endX - startX + 1, endY - startY + 1);
+        bool pixelsChanged = false;
+
+        for (int y = startY; y <= endY; y++)
+        {
+            for (int x = startX; x <= endX; x++)
             {
-                for (int x = startX; x <= endX; x++)
+                int brushX = x - (pixelX - brushHalfWidth);
+                int brushY = y - (pixelY - brushHalfHeight);
+
+                if (brushX < 0 || brushX >= brush.width || brushY < 0 || brushY >= brush.height)
+                    continue;
+
+                int brushIndex = brushY * brush.width + brushX;
+                int dirtIndex = (y - startY) * (endX - startX + 1) + (x - startX);
+
+                if (IsBlackEnough(brushPixels[brushIndex]))
                 {
-                    int brushX = x - (pixelX - brushHalfWidth);
-                    int brushY = y - (pixelY - brushHalfHeight);
-
-                    if (brushX < 0 || brushX >= brush.width || brushY < 0 || brushY >= brush.height)
-                        continue;
-
-                    int brushIndex = brushY * brush.width + brushX;
-                    int dirtIndex = (y - startY) * (endX - startX + 1) + (x - startX);
-
-                    if (IsBlackEnough(brushPixels[brushIndex]))
-                    {
-                        Color dirtPixel = dirtPixels[dirtIndex];
-                        dirtPixel.r = 0f;
-                        dirtPixel.g *= Mathf.Lerp(1f, brushPixels[brushIndex].g, brushStrength);
-                        dirtPixels[dirtIndex] = dirtPixel;
-                        pixelsChanged = true;
-                    }
+                    dirtPixels[dirtIndex] = ProcessPixel(dirtPixels[dirtIndex], brushPixels[brushIndex]);
+                    pixelsChanged = true;
                 }
             }
-
-            if (pixelsChanged)
-            {
-                dirtMask.SetPixels(startX, startY, endX - startX + 1, endY - startY + 1, dirtPixels);
-                dirtMask.Apply();
-                cleaningCountThisFrame++;
-                lastCleaningTime = Time.time;
-
-                window.UpdateCleaningState(currentTool);
-            }
         }
-    }
 
-    private bool CanUseTool(Window window)
-    {
-        float cleanliness = window.CalculateCleanliness();
-
-        switch (currentTool)
+        if (pixelsChanged)
         {
-            case ToolType.WaterSpray:
-                return cleanliness < 0.3f;
-
-            case ToolType.ChemicalSpray:
-                return cleanliness >= 0.3f && cleanliness < 0.6f;
-
-            case ToolType.Squeegee:
-                return cleanliness >= 0.6f && cleanliness < requiredCleanliness;
-
-            case ToolType.Towel:
-                return cleanliness >= requiredCleanliness;
-
-            default:
-                return false;
+            dirtMask.SetPixels(startX, startY, endX - startX + 1, endY - startY + 1, dirtPixels);
+            dirtMask.Apply();
+            window.UpdateCleaningState(tool);
+            //PlayToolSound(tool);
         }
     }
 
-    private bool IsBlackEnough(Color color)
+    private Color ProcessPixel(Color dirtPixel, Color brushPixel)
     {
-        return (color.r * color.r + color.g * color.g + color.b * color.b) < 0.01f;
+        dirtPixel.r = 0f;
+        dirtPixel.g *= Mathf.Lerp(1f, brushPixel.g, brushStrength);
+        return dirtPixel;
     }
 
-    private void OnDrawGizmos()
+    private bool IsBlackEnough(Color color) => (color.r + color.g + color.b) < 0.3f;
+
+    /*private void PlayToolSound(Clean tool)
     {
-        if (rayOrigin != null)
+        if (tool.useSound != null)
         {
-            Gizmos.color = Color.red;
-            Gizmos.DrawRay(rayOrigin.position, rayOrigin.forward * rayLength);
+            AudioSource.PlayClipAtPoint(tool.useSound, transform.position);
         }
+    }*/
+
+    private void OnDisable()
+    {
+        StopCleaning();
     }
 }
