@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 
@@ -13,8 +14,18 @@ public class Window : MonoBehaviour
     void Awake()
     {
         CopyOfMaterialToWorkOn = new Material(MaterialToWorkOn);
-        CopyOfMaterialToWorkOn.SetTexture("StartTexture", MaterialToWorkOn.GetTexture("_StartTexture"));
-        CopyOfMaterialToWorkOn.SetTexture("Mask", MaterialToWorkOn.GetTexture("_Mask"));
+
+        CopyOfMaterialToWorkOn.SetTexture("_Mask", CopyTexture(MaterialToWorkOn.GetTexture("_Mask")));
+
+        MeshRenderer meshRenderer = transform.GetComponentInParent<MeshRenderer>();
+        meshRenderer.material = CopyOfMaterialToWorkOn;
+    }
+
+    private Texture CopyTexture(Texture texture)
+    {
+        Texture2D copyTexture = new(texture.width, texture.height);
+        Graphics.CopyTexture(texture, copyTexture);
+        return copyTexture;
     }
 
     public bool CanUseTool(CleaningTool cleaningTool)
