@@ -79,10 +79,10 @@
             "m_Id": "493cb8e061ff4dc5b1eb62abddf99ea8"
         },
         {
-            "m_Id": "c432d8fc65eb44e6aa7e365cf4703c1d"
+            "m_Id": "6031c6965526428fbcfd53c9c8651092"
         },
         {
-            "m_Id": "6031c6965526428fbcfd53c9c8651092"
+            "m_Id": "20d86c56f6264eab83f21813326105cd"
         }
     ],
     "m_GroupDatas": [],
@@ -285,10 +285,10 @@
                 "m_Id": "8401d680b9804cdaa33e5b3672f654ae"
             },
             {
-                "m_Id": "c432d8fc65eb44e6aa7e365cf4703c1d"
+                "m_Id": "6031c6965526428fbcfd53c9c8651092"
             },
             {
-                "m_Id": "6031c6965526428fbcfd53c9c8651092"
+                "m_Id": "20d86c56f6264eab83f21813326105cd"
             }
         ]
     },
@@ -550,6 +550,55 @@
 {
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "20d86c56f6264eab83f21813326105cd",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.Alpha",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "26b7f19fa68249718502e5b88b8a22e2"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "26b7f19fa68249718502e5b88b8a22e2",
+    "m_Id": 0,
+    "m_DisplayName": "Alpha",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Alpha",
+    "m_StageCapability": 2,
+    "m_Value": 0.800000011920929,
+    "m_DefaultValue": 1.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
     "m_ObjectId": "27970cbd25684387bd61db5bdcbbba08",
     "m_Group": {
         "m_Id": ""
@@ -586,7 +635,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "2f396d411f584af08ae8a09c5331b516",
     "m_Id": 0,
-    "m_DisplayName": "DirtMask",
+    "m_DisplayName": "Mask",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1500,21 +1549,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "83ccb830abad42c886a551e9a29accf9",
-    "m_Id": 0,
-    "m_DisplayName": "Alpha",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Alpha",
-    "m_StageCapability": 2,
-    "m_Value": 0.800000011920929,
-    "m_DefaultValue": 1.0,
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.BlockNode",
     "m_ObjectId": "8401d680b9804cdaa33e5b3672f654ae",
     "m_Group": {
@@ -1959,40 +1993,6 @@
 {
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.BlockNode",
-    "m_ObjectId": "c432d8fc65eb44e6aa7e365cf4703c1d",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "SurfaceDescription.Alpha",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 0.0,
-            "y": 0.0,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "83ccb830abad42c886a551e9a29accf9"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
     "m_ObjectId": "c4b01effbd9342b2b52fa6af1f776119",
     "m_Group": {
         "m_Id": ""
@@ -2124,10 +2124,10 @@
     "m_Guid": {
         "m_GuidSerialized": "22e3718e-7efc-4776-8416-0e9142cff78c"
     },
-    "m_Name": "DirtMask",
+    "m_Name": "Mask",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "DirtMask",
-    "m_DefaultReferenceName": "_DirtMask",
+    "m_RefNameGeneratedByDisplayName": "Mask",
+    "m_DefaultReferenceName": "_Mask",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
