@@ -5,27 +5,16 @@ public class Window : MonoBehaviour
 {
     public Material MaterialToWorkOn;
     public Material CopyOfMaterialToWorkOn { get; private set; } = null;
-    public Texture2D MaskOfMaterialToWorkOn { get; private set; } = null;
-    public Texture2D StartOfMaterialToWorkOn { get; private set; } = null;
-    [SerializeField] private Texture2D startTexture;
-    [SerializeField] private Texture2D maskTemplate;
+
     [SerializeField] private string PermittedToolName;
     public Window NextState;
     public string StateName => gameObject.name;
 
     void Awake()
     {
-        StartOfMaterialToWorkOn = Instantiate(startTexture);
-
-        MaskOfMaterialToWorkOn = new Texture2D(maskTemplate.width, maskTemplate.height, TextureFormat.RGBA32, false);
-        MaskOfMaterialToWorkOn.SetPixels(maskTemplate.GetPixels());
-        MaskOfMaterialToWorkOn.Apply();
-
         CopyOfMaterialToWorkOn = new Material(MaterialToWorkOn);
-        CopyOfMaterialToWorkOn.SetTexture("StartTexture", StartOfMaterialToWorkOn);
-        CopyOfMaterialToWorkOn.SetTexture("Mask", MaskOfMaterialToWorkOn);
-
-        GetComponentInParent<MeshRenderer>().material = CopyOfMaterialToWorkOn;
+        CopyOfMaterialToWorkOn.SetTexture("StartTexture", MaterialToWorkOn.GetTexture("_StartTexture"));
+        CopyOfMaterialToWorkOn.SetTexture("Mask", MaterialToWorkOn.GetTexture("_Mask"));
     }
 
     public bool CanUseTool(CleaningTool cleaningTool)
@@ -36,7 +25,6 @@ public class Window : MonoBehaviour
         return cleaningTool.transform.parent.name == PermittedToolName;
     }
 
-
     public void ChangeMaterial()
     {
         if (NextState != null && NextState.MaterialToWorkOn != null)
@@ -45,11 +33,9 @@ public class Window : MonoBehaviour
         }
     }
 
-
     public float CalculateConvertedPercentage()
     {
-        CopyOfMaterialToWorkOn.SetTexture("Mask", MaskOfMaterialToWorkOn);
-        Color[] pixels = MaskOfMaterialToWorkOn.GetPixels();
+        Color[] pixels = ((Texture2D)CopyOfMaterialToWorkOn.GetTexture("_Mask")).GetPixels();
 
         int convertedPixelCount = 0;
         foreach (Color pixel in pixels)

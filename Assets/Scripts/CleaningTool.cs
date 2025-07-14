@@ -21,8 +21,6 @@ public class CleaningTool : MonoBehaviour
     public bool IsContinuous;
     private bool isCompleted = false;
 
-    public RawImage debugMaskDisplay;
-
     void Awake()
     {
         CacheEffectiveBrushPixels();
@@ -116,7 +114,7 @@ public class CleaningTool : MonoBehaviour
         Debug.Log("Cleaning started");
 
         Vector2 textureCoord = hit.textureCoord;
-        Texture2D mask = window.MaskOfMaterialToWorkOn;
+        Texture2D mask = (Texture2D)window.CopyOfMaterialToWorkOn.GetTexture("_Mask");
         Vector2Int hitPoint = new Vector2Int(
             (int)(textureCoord.x * mask.width),
             (int)(textureCoord.y * mask.height)
@@ -151,12 +149,8 @@ public class CleaningTool : MonoBehaviour
         if (pixelsChanged)
         {
             mask.Apply();
-            debugMaskDisplay.texture = window.MaskOfMaterialToWorkOn;
-
+            Debug.Log(convertedPercentage = window.CalculateConvertedPercentage());
         }
-
-        convertedPercentage = window.CalculateConvertedPercentage();
-        Debug.Log(window.CalculateConvertedPercentage());
 
         if (convertedPercentage == 100f)
         {
