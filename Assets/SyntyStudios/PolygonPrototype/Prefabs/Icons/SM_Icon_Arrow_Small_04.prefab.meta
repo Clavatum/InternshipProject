@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 84a02c2e8957e054fb30eea648b4f18d
+timeCreated: 1547159150
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Arrow_Small_04.prefab
+  uploadId: 645704

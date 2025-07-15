@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d74af269a7841e14fa91c9f9c0cb8060
+timeCreated: 1579748641
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Env_Road_YellowLines_02_Convex.asset
+  uploadId: 645704

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a6e97b66daa2b15408d96c34f3f20699
+timeCreated: 1579739085
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_Manhole_01_Convex.asset
+  uploadId: 645704

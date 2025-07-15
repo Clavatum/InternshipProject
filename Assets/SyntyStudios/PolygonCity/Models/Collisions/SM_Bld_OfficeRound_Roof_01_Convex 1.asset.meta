@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6f2086f3336bccd4eb86cd3abc8bf2f6
+timeCreated: 1579743412
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Bld_OfficeRound_Roof_01_Convex
+    1.asset
+  uploadId: 645704

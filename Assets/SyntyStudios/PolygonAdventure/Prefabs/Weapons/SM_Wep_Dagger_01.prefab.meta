@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 00565c6238126424599242cffe0ede5b
+timeCreated: 1484281217
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Weapons/SM_Wep_Dagger_01.prefab
+  uploadId: 645704

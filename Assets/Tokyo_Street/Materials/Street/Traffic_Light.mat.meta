@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0aeebf797b6a317448e40eafdf13f8c6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/Street/Traffic_Light.mat
+  uploadId: 631600

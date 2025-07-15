@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1da128d179f99f24b8127fd97ca15aac
+timeCreated: 1487632550
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Prefabs/Characters/Character_Soldier_01_Yellow.prefab
+  uploadId: 645704

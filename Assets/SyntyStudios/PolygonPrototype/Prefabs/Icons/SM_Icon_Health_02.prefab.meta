@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d30c6e18a473ede40b473c59c24dd36a
+timeCreated: 1547159191
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Health_02.prefab
+  uploadId: 645704

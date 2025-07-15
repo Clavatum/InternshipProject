@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 120a30810eaae2e48ae0d922e3d7f4dc
+timeCreated: 1579815215
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Wep_Sheild_03_Convex.asset
+  uploadId: 645704

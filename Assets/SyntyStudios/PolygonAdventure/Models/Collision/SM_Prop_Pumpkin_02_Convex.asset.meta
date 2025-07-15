@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e3d9a34d688e4eb4d829097d3923b4c3
+timeCreated: 1579814897
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Prop_Pumpkin_02_Convex.asset
+  uploadId: 645704

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 415d7550d05e67747b3d7786e2cddeca
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/House/Glass_House_Fade.mat
+  uploadId: 631600

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bcc043e1631a8414aae973eb8495757f
+timeCreated: 1580700445
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_Castle_Wall_Gate_01_Lite_Convex.asset
+  uploadId: 645704

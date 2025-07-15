@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: add6824d3fb8bf448a365ed8a31e1fa8
+timeCreated: 1579739080
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_PicnicTable_01_Convex.asset
+  uploadId: 645704

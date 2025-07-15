@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5e4124995f6a4124f88614e4e0a837a5
+timeCreated: 1579739439
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_Skip_01_Convex
+    1.asset
+  uploadId: 645704

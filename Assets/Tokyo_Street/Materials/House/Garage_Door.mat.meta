@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 218abb9a456ebcc4f83e6c682b5039d1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/House/Garage_Door.mat
+  uploadId: 631600

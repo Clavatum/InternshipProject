@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 06cc8d0d43cd6f74fae5399ceeff2be8
+timeCreated: 1579739095
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_LargeSign_Milkshake_01_Convex.asset
+  uploadId: 645704

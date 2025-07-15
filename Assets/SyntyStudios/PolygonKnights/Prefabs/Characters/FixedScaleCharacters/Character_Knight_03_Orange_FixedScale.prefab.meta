@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e34bd3f5d4151cd438a2d6d09cc5e0f5
+timeCreated: 1545086289
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Prefabs/Characters/FixedScaleCharacters/Character_Knight_03_Orange_FixedScale.prefab
+  uploadId: 645704

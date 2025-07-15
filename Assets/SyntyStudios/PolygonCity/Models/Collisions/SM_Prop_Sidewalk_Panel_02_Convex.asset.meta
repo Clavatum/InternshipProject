@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 724dc7172baa5964385076bf82c4bcb2
+timeCreated: 1579739056
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_Sidewalk_Panel_02_Convex.asset
+  uploadId: 645704

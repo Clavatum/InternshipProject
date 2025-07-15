@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bb69f1807d69f094f95795cfae50b7de
+timeCreated: 1579814894
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Prop_Scroll_02_Convex.asset
+  uploadId: 645704

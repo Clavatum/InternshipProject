@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 86af73d202eb9b0449e4e2e09076f15f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Other/Day_Lighting Settings.lighting
+  uploadId: 631600

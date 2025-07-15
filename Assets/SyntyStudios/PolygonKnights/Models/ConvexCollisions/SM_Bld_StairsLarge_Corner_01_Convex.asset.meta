@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fef467e24c85a014c85f104f03422ccb
+timeCreated: 1580700464
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_StairsLarge_Corner_01_Convex.asset
+  uploadId: 645704

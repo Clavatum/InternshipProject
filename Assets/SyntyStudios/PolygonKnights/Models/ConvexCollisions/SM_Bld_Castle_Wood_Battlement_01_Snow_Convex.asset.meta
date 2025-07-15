@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 43ff4c3f0cb41a940ab191c303cb1a32
+timeCreated: 1580700540
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_Castle_Wood_Battlement_01_Snow_Convex.asset
+  uploadId: 645704

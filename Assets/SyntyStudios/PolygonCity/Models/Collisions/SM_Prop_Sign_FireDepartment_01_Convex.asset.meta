@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 990bec327a2acad4699a8347e2cd20f8
+timeCreated: 1579739048
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_Sign_FireDepartment_01_Convex.asset
+  uploadId: 645704

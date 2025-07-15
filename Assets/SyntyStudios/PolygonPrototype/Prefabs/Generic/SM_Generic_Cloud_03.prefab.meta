@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 711657b179c657e4a9b8b1d4381e8467
+timeCreated: 1547159145
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Generic/SM_Generic_Cloud_03.prefab
+  uploadId: 645704

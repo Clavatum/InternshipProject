@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e776a46bd497b2247994e599f1a3c8a8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Other/SimpleCameraController.cs
+  uploadId: 631600

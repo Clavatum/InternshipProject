@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1a45ecb06104d064db6530e6a3f27999
+timeCreated: 1579737654
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Env_Fence_End_01_Convex.asset
+  uploadId: 645704

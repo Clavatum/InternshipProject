@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 08f252a4011784244a9d6c53e18b1f7c
+timeCreated: 1579742427
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Bld_Shop_01_Convex
+    1.asset
+  uploadId: 645704

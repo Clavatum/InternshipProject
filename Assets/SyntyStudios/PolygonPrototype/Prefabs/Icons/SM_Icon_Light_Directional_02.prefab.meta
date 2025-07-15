@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: fcdc53b40414ad24784c8d08ba9dc13d
+timeCreated: 1547159166
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Light_Directional_02.prefab
+  uploadId: 645704

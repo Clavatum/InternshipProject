@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 71b1b7aae4b10fd4f897e97b3ce86f9d
+timeCreated: 1547159188
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Note_Old_01.prefab
+  uploadId: 645704

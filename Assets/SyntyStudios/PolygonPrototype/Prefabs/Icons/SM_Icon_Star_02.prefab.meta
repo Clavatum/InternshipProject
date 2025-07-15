@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 38bf683a040b90a4681baee96cb396ac
+timeCreated: 1547159179
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Star_02.prefab
+  uploadId: 645704

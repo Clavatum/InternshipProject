@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1e3f4dd6698853844b8cab4c33a09c96
+timeCreated: 1547090495
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Materials/PolygonPrototype_Texture_10.mat
+  uploadId: 645704

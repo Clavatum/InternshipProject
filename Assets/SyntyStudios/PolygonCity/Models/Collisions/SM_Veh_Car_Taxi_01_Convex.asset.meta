@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8490b93ff3337864ebb8327f9b5e6990
+timeCreated: 1579751067
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Veh_Car_Taxi_01_Convex.asset
+  uploadId: 645704

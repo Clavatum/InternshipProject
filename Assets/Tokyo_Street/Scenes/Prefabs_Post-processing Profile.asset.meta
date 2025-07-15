@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2e9654bba857b06419453a010ecca5ad
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Scenes/Prefabs_Post-processing Profile.asset
+  uploadId: 631600

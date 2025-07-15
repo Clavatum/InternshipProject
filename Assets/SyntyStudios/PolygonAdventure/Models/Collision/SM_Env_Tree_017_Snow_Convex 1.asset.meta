@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e157d25b163c4c84a962a9f400d38a25
+timeCreated: 1579812623
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_Tree_017_Snow_Convex
+    1.asset
+  uploadId: 645704

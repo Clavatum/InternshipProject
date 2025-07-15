@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d6f2a6aa53be2674580ae1599bb9a33e
+timeCreated: 1546825084
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Shaders/Prototype_Global.shader
+  uploadId: 645704

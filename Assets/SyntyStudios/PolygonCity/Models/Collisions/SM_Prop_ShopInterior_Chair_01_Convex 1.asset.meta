@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: af59407df1c891742b908ffa0905eecd
+timeCreated: 1579739435
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_ShopInterior_Chair_01_Convex
+    1.asset
+  uploadId: 645704

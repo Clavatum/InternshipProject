@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6d768ed8c1941594aa52e683be1a33f7
+timeCreated: 1547422763
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Props/SM_Prop_Tree_Round_02.prefab
+  uploadId: 645704

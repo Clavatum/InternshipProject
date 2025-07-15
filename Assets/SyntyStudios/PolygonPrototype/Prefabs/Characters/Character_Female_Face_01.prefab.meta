@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 538090c735358e94db8b3f02fda66106
+timeCreated: 1547090971
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Characters/Character_Female_Face_01.prefab
+  uploadId: 645704

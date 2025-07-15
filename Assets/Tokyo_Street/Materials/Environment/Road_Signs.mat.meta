@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d30767eb3fec1cf4b867ca5347799e36
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/Environment/Road_Signs.mat
+  uploadId: 631600

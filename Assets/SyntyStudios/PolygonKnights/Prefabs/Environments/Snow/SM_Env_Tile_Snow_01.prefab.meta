@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0342ae64093dbba4f84d82ae8f84abce
+timeCreated: 1487283853
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Prefabs/Environments/Snow/SM_Env_Tile_Snow_01.prefab
+  uploadId: 645704

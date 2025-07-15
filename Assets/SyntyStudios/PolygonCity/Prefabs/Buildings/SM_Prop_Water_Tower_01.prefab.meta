@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b1c9a178d3040a14aac77ac6bcbcc9bd
+timeCreated: 1499309660
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Prefabs/Buildings/SM_Prop_Water_Tower_01.prefab
+  uploadId: 645704

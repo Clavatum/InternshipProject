@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f4e5b638c12396f4bbcf79f963f45f86
+timeCreated: 1579751388
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Env_SubwayEntrance_02_Convex
+    5.asset
+  uploadId: 645704

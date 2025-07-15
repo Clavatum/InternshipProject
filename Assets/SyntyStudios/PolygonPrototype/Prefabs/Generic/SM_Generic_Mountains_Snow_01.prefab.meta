@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7cba3508c71084d4d877dd172c76a321
+timeCreated: 1547159150
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Generic/SM_Generic_Mountains_Snow_01.prefab
+  uploadId: 645704

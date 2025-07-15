@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0335a1d8a6f92a5418f172da855570ad
+timeCreated: 1547089417
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Shaders/Prototype_Object.shader
+  uploadId: 645704

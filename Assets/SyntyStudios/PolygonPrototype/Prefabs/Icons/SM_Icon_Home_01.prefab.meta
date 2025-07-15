@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 654d4d8f5974c3b48ae242504f4725dc
+timeCreated: 1547159192
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Home_01.prefab
+  uploadId: 645704

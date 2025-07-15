@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e98c6890f1eba6549b045e4b9d14514d
+timeCreated: 1579737655
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Env_Cloud_02_Convex.asset
+  uploadId: 645704

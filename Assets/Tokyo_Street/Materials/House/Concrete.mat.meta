@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0b53ec93cc11f3a48912290190ffd800
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/House/Concrete.mat
+  uploadId: 631600

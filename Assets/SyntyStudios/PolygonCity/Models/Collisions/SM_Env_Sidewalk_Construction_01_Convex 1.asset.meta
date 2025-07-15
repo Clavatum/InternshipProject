@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: cf9f8e047e0679b4c971e9b9c660c13e
+timeCreated: 1579737472
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Env_Sidewalk_Construction_01_Convex
+    1.asset
+  uploadId: 645704

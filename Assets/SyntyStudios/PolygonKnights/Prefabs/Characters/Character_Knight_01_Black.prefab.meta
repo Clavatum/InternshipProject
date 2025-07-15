@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 507f5dc602b42c549a32a51aa9236bb1
+timeCreated: 1487632452
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Prefabs/Characters/Character_Knight_01_Black.prefab
+  uploadId: 645704

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4bdbcd1174ad0464381bb8df6bb1c710
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/Environment/Parking.mat
+  uploadId: 631600

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 29c6f824a8087b549a0a0b68c7810a06
+timeCreated: 1499290751
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_ParkBench_01.prefab
+  uploadId: 645704

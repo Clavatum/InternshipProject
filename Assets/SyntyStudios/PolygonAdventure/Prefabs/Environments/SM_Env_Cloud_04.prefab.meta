@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c13526726c259ba48a081c99b5a47c66
+timeCreated: 1484281212
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Cloud_04.prefab
+  uploadId: 645704

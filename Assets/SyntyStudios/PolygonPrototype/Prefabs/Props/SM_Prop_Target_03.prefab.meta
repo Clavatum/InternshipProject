@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 16a0b624de8ccef48a7ccbfd6f35d56f
+timeCreated: 1547159199
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Props/SM_Prop_Target_03.prefab
+  uploadId: 645704

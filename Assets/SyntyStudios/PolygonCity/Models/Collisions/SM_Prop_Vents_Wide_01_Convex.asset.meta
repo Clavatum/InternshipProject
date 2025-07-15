@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b48695634c1d0f54c835a6c268b5027e
+timeCreated: 1579739027
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_Vents_Wide_01_Convex.asset
+  uploadId: 645704

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a5bbe08e8d4661845bb71068b601744c
+timeCreated: 1547159204
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Props/SM_Switch_Button_02.prefab
+  uploadId: 645704

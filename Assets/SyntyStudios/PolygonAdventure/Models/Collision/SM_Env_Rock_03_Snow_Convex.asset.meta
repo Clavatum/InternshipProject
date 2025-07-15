@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d92d71b95312ed84d9898878736bd484
+timeCreated: 1579812925
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_Rock_03_Snow_Convex.asset
+  uploadId: 645704

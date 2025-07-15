@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e085efd7717305e4599e6fe611728337
+timeCreated: 1579815217
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Wep_Pitchfork_01_Convex.asset
+  uploadId: 645704

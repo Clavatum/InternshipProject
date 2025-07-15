@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fd5063408113d1b489d9860769d07a3f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/Street/Road_Hatch.mat
+  uploadId: 631600

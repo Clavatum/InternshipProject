@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c5f1a26924665b14e856bbd927ba9a75
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Other/Sidewalk_Terrain_01.terrainlayer
+  uploadId: 631600

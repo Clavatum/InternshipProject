@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1f3dca6c2051bca4ba3610c75bd29ba7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Prefabs/Environment/Parking_Limiter_02.prefab
+  uploadId: 631600

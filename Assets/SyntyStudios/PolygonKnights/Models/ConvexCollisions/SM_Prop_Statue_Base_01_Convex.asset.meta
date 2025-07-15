@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 696fce1494f8196498194f8b6efb3441
+timeCreated: 1580700184
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Prop_Statue_Base_01_Convex.asset
+  uploadId: 645704

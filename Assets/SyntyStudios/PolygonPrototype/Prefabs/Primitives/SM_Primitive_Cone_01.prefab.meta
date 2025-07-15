@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3067d9bc573646846a758efc3071a8f2
+timeCreated: 1547159189
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Primitives/SM_Primitive_Cone_01.prefab
+  uploadId: 645704

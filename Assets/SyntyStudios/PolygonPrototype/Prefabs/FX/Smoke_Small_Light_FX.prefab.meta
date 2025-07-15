@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 90f965259c782c74a830882af458b544
+timeCreated: 1517362107
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/FX/Smoke_Small_Light_FX.prefab
+  uploadId: 645704

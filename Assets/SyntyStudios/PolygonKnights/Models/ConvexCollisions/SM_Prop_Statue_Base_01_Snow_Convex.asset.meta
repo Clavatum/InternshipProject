@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 47423bb048af63644889c8f5b526e2cc
+timeCreated: 1580700298
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Prop_Statue_Base_01_Snow_Convex.asset
+  uploadId: 645704

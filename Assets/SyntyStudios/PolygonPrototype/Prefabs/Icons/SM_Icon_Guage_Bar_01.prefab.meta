@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c6e5d3c3985bfbb499102dd996b8ef94
+timeCreated: 1547159148
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Guage_Bar_01.prefab
+  uploadId: 645704

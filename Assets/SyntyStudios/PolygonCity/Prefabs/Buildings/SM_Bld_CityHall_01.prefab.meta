@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7867ba7f5410daf41b58b5427b1d9554
+timeCreated: 1499290749
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Prefabs/Buildings/SM_Bld_CityHall_01.prefab
+  uploadId: 645704

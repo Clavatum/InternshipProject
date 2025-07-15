@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f67f169d49d86a249811e5255748aee1
+timeCreated: 1579814903
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Prop_Cheese_02_Convex.asset
+  uploadId: 645704

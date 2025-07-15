@@ -1,0 +1,4 @@
+Recovery spray 1:
+Polygon coun of LOD0: 512
+Polygon coun of LOD1: 192
+Polygon coun of LOD2: 72

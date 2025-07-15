@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f4c62b1a746281e44800c9250dd3643c
+timeCreated: 1484281214
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Items/SM_Item_Lantern_01.prefab
+  uploadId: 645704

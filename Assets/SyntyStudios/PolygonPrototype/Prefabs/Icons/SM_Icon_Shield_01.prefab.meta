@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1961192e49bb4e14a96c112a868b1389
+timeCreated: 1547159176
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Shield_01.prefab
+  uploadId: 645704

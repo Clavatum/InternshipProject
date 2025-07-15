@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: d0dd38e172fdb2e43b2143bc395a9c66
+timeCreated: 1579815258
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Wep_Axe_01_Convex
+    2.asset
+  uploadId: 645704

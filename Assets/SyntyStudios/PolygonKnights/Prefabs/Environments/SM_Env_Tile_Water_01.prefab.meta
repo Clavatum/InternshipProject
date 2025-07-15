@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 32aa153ddd88f9647ae3fed004d7fc79
+timeCreated: 1487205334
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Prefabs/Environments/SM_Env_Tile_Water_01.prefab
+  uploadId: 645704

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4d6a07049b19b044f943c3334e4c8480
+timeCreated: 1580700545
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_House_Chimney_03_Snow_Convex.asset
+  uploadId: 645704

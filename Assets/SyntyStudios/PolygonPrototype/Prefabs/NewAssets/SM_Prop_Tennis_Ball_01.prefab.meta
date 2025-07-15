@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7ca3e8e40aad13142908e805c49530dc
+timeCreated: 1572561023
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/NewAssets/SM_Prop_Tennis_Ball_01.prefab
+  uploadId: 645704

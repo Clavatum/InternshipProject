@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ad3a54cb4d1546e42aac9fca4d3a30a5
+timeCreated: 1579812391
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Bld_Wall_01_Convex
+    1.asset
+  uploadId: 645704

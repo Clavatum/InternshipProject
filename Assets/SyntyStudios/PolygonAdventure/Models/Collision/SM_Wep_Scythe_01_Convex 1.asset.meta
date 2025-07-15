@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 4fa4c12bceccad84dac577dff75b9425
+timeCreated: 1579815234
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Wep_Scythe_01_Convex
+    1.asset
+  uploadId: 645704

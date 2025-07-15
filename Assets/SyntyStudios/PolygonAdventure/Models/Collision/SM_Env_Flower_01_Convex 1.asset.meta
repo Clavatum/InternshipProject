@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6c3e67aaf56929d4eb870c94ed06c900
+timeCreated: 1579813346
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_Flower_01_Convex
+    1.asset
+  uploadId: 645704

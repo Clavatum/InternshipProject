@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c8d741e1bb027704d939552d07458895
+timeCreated: 1580700505
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_Castle_Pillar_01_Convex.asset
+  uploadId: 645704

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8c2736f3aab5c944c945f3c7d00851be
+timeCreated: 1580700461
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_Rockwall_Stairs_01_Convex.asset
+  uploadId: 645704

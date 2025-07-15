@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 390c2bf1514a09e49a2aa0361d9e314c
+timeCreated: 1484281219
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Flower_03.prefab
+  uploadId: 645704

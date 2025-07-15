@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 515d727a925c6c54b9134243949805e2
+timeCreated: 1580700568
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_Castle_Tower_Round_Top_01_Snow_Convex.asset
+  uploadId: 645704

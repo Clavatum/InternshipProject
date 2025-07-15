@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dadc89d717c1aae429ce06e50c1d5683
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Scenes/Night_Post-processing Profile.asset
+  uploadId: 631600

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d459d9754445d414397f9c4c5201238e
+timeCreated: 1579739051
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_Sign_Bustop_01_Convex.asset
+  uploadId: 645704

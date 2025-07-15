@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 68a5ac2c147b17a47b16b959e5256072
+timeCreated: 1579739038
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_Table_02_Convex.asset
+  uploadId: 645704

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6a2ab7415cd0d344da09e041feee987a
+timeCreated: 1580700929
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Env_Path_Tile_Corner_01_Convex.asset
+  uploadId: 645704

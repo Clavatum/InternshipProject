@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 3fcb2b311348d1941bbd75451dad8871
+timeCreated: 1547159153
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Letter_O_01.prefab
+  uploadId: 645704

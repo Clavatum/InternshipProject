@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: eee026b29363e1442a0de0a969a8a501
+timeCreated: 1580700587
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_House_RoomTall_01_Snow_Convex.asset
+  uploadId: 645704

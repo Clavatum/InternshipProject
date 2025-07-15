@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8a521154430ac7b4f84ecd2939a3f482
+timeCreated: 1487205334
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Prefabs/Environments/SM_Env_Cliff_02.prefab
+  uploadId: 645704

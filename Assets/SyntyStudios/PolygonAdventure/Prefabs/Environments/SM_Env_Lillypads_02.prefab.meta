@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bd9a2c5a7210d73419c64043a4c3bc86
+timeCreated: 1484281213
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Lillypads_02.prefab
+  uploadId: 645704

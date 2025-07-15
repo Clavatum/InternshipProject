@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 95e8109418608c7498fa571e489b794c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/House/Ceiling.mat
+  uploadId: 631600

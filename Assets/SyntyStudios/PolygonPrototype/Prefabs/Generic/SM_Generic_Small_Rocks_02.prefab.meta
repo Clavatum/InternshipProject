@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 23c6666f4e51c18408a67510426d9554
+timeCreated: 1547159230
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Generic/SM_Generic_Small_Rocks_02.prefab
+  uploadId: 645704

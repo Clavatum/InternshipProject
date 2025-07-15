@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c7491b2a33df8a944bdcf31ff40103c2
+timeCreated: 1484281219
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Items/SM_Item_Potion_05.prefab
+  uploadId: 645704

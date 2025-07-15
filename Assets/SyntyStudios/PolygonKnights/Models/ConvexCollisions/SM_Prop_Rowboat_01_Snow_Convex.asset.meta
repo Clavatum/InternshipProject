@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: dffcf16f86c7b1c4db0d4b8b94c518d2
+timeCreated: 1580700302
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Prop_Rowboat_01_Snow_Convex.asset
+  uploadId: 645704

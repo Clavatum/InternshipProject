@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0bb8bd6e0a070474fb5678c449230c6f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Prefabs/Street/Step_Corner_0.5m_05.prefab
+  uploadId: 631600

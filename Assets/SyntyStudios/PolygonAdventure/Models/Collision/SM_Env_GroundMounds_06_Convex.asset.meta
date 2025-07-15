@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a64bb43691dc55449a3c280fee9ea472
+timeCreated: 1579819140
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_GroundMounds_06_Convex.asset
+  uploadId: 645704

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c828aad58e045884d9bcabfcdacc69fa
+timeCreated: 1499290745
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Prefabs/Buildings/SM_Bld_Apartment_Door_01.prefab
+  uploadId: 645704

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f1b7f3d15ab793646b30875c13945fab
+timeCreated: 1580700823
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_House_Tower_01_Convex
+    1.asset
+  uploadId: 645704

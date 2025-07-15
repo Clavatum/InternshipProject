@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4a0bbf342b1b274429b291c849e7f818
+timeCreated: 1547159220
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Primitives/SM_Primitive_Tube_05.prefab
+  uploadId: 645704

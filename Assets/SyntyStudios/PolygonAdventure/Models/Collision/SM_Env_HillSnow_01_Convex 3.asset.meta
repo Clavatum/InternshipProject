@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: fa0233c03f050fd41b4f5ca2424cae55
+timeCreated: 1579815461
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_HillSnow_01_Convex
+    3.asset
+  uploadId: 645704

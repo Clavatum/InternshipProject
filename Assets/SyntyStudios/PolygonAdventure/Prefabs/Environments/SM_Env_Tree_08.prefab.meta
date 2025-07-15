@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1a2e1c6550b2a8d4590347dd6573d878
+timeCreated: 1484281217
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Tree_08.prefab
+  uploadId: 645704

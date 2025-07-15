@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 5fb125617629fb64386fdafd5ec4a612
+timeCreated: 1547088379
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/FX/SM_FX_Glow_Ring_01.prefab
+  uploadId: 645704

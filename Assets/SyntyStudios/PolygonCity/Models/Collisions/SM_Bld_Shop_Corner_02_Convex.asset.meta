@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6c49ad8a45e6f9941828da4ce691cc71
+timeCreated: 1579742400
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Bld_Shop_Corner_02_Convex.asset
+  uploadId: 645704

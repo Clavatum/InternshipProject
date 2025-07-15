@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1c8a018b63f946040859e20c88be939c
+timeCreated: 1579813578
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_Reeds_02_Convex
+    1.asset
+  uploadId: 645704

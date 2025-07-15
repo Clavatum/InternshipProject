@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9b4268c7a04c21a46b931a829b162128
+timeCreated: 1579739061
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_ShopInterior_Display_01_Convex.asset
+  uploadId: 645704

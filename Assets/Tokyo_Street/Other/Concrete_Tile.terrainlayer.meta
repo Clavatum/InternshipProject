@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3f14e0cb937be1845b6dfde198038d97
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8574412962073106934
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Other/Concrete_Tile.terrainlayer
+  uploadId: 631600

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 145f348e256af154db8fe5b9aa326d8e
+timeCreated: 1580700432
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_House_Foundation_02_Convex.asset
+  uploadId: 645704

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d3c006a1b9a8b264f8bee7b56f38100a
+timeCreated: 1572561322
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Materials/PolygonPrototype_Wire.mat
+  uploadId: 645704

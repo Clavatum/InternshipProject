@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ed59e23bddf06024fa2c6e7b098fd937
+timeCreated: 1580700292
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Prop_Plinth_01_Snow_Convex.asset
+  uploadId: 645704

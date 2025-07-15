@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 88de0f284b94aec419dcb50855cd2068
+timeCreated: 1580700853
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_House_Window_02_Convex
+    1.asset
+  uploadId: 645704

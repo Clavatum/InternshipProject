@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 03ade969ba0f5d842a49161d00145831
+timeCreated: 1499290743
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_ParkingMeter_01.prefab
+  uploadId: 645704

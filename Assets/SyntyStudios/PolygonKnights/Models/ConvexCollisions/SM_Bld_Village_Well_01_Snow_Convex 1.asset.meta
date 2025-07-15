@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 2490935a7d396014e9d3801beb66ae2c
+timeCreated: 1580701202
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_Village_Well_01_Snow_Convex
+    1.asset
+  uploadId: 645704

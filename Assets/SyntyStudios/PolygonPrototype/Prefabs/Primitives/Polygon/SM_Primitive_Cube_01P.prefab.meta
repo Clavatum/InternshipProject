@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ef32e3c3c0b5b3f44b0282a87d39994b
+timeCreated: 1547159209
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Primitives/Polygon/SM_Primitive_Cube_01P.prefab
+  uploadId: 645704

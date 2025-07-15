@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f9234dbd3eaebe540b0bdb320e9c1e9e
+timeCreated: 1579812918
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_Rock_016_Convex.asset
+  uploadId: 645704

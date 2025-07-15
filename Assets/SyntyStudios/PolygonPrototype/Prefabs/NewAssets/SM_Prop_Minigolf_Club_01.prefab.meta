@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 72617192424b535478e42a1093d0273c
+timeCreated: 1572561022
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/NewAssets/SM_Prop_Minigolf_Club_01.prefab
+  uploadId: 645704

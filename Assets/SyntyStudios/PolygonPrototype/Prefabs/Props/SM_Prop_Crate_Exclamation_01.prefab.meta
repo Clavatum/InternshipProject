@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7094eb5fc31a84847a29440d1ce60ec6
+timeCreated: 1547159224
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Props/SM_Prop_Crate_Exclamation_01.prefab
+  uploadId: 645704

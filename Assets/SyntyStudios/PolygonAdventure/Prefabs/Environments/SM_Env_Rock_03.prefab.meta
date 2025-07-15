@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 954d5b0641aca3b4da80d82212a18e28
+timeCreated: 1484281211
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_Rock_03.prefab
+  uploadId: 645704

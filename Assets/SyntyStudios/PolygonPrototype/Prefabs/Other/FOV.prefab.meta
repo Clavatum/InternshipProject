@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c9a589dc94f925a4c8b6763a02a7acb6
+timeCreated: 1572470488
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Other/FOV.prefab
+  uploadId: 645704

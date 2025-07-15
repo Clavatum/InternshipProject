@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0898e23f0360c1544ad76172d1d93586
+timeCreated: 1547159231
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Ammo_01.prefab
+  uploadId: 645704

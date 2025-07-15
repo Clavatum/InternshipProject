@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0c8b53b4a2c2a624d8f344f282d709aa
+timeCreated: 1487205331
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Prefabs/Environments/SM_Env_Path_Tile_01.prefab
+  uploadId: 645704

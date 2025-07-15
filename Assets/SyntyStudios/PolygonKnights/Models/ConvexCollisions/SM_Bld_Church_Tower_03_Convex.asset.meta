@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 853c4d68248acee45b4eb668f4eb2b44
+timeCreated: 1580700448
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_Church_Tower_03_Convex.asset
+  uploadId: 645704

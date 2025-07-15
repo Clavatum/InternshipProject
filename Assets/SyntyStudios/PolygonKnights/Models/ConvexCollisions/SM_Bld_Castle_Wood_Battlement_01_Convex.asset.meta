@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bf58ec9a248eff140ab81106f7539900
+timeCreated: 1580700482
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_Castle_Wood_Battlement_01_Convex.asset
+  uploadId: 645704

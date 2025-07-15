@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 655f0bffe07293142ab2ca2648ad5ed1
+timeCreated: 1579742408
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Bld_Roof_Access_01_Convex.asset
+  uploadId: 645704

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dac2afd5e1dda1c4d9fe05cf141b47f0
+timeCreated: 1484187834
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Characters/Character_Knight_White.prefab
+  uploadId: 645704

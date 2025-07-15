@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f16268c9e030739488daf1400d42411c
+timeCreated: 1547159217
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Primitives/SM_Primitive_Torus_04.prefab
+  uploadId: 645704

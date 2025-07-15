@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d1ea9fd7a90761e4e937ca36ef18ba8c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/Environment/Dumpster.mat
+  uploadId: 631600

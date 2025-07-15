@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a622cb99b9b9d9d4f90980f197b67e3f
+timeCreated: 1579739100
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_LargeSign_BowlingBall_01_Convex.asset
+  uploadId: 645704

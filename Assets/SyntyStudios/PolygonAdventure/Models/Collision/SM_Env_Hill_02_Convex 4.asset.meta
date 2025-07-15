@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 9ec1901e351384e4fafaa09a1a6df9b8
+timeCreated: 1579815485
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_Hill_02_Convex
+    4.asset
+  uploadId: 645704

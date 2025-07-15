@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c4cdd7c71e0cce945b0e9c2ce754d576
+timeCreated: 1547159220
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Primitives/SM_Primitive_Wedge_01.prefab
+  uploadId: 645704

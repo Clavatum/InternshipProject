@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ed9fd7e6c74a92f42b49e06cb75d2088
+timeCreated: 1484281215
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_GroundMounds_04.prefab
+  uploadId: 645704

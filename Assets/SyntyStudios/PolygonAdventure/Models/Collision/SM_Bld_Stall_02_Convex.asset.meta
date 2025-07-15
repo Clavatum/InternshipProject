@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1795a49f29213e346b8ac4db49fc77b1
+timeCreated: 1579755943
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Bld_Stall_02_Convex.asset
+  uploadId: 645704

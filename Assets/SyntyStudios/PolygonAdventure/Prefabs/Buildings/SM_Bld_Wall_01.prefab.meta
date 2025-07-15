@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 76d0990ce6d878544bdb1bc9f388dbce
+timeCreated: 1484281211
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Buildings/SM_Bld_Wall_01.prefab
+  uploadId: 645704

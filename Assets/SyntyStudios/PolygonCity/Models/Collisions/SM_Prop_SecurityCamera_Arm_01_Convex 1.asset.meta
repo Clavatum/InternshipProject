@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6c6d984cb1644f147a4cdfcc958e3334
+timeCreated: 1579739436
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_SecurityCamera_Arm_01_Convex
+    1.asset
+  uploadId: 645704

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b6594e939156fa6479d25979f2d0b518
+timeCreated: 1572561024
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/NewAssets/SM_Prop_Microphone_Stand_Empty_01.prefab
+  uploadId: 645704

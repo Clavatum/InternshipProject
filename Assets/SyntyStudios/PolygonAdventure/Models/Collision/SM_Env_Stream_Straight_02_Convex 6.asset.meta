@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 3722a4702bfc964459b37c75ecf58439
+timeCreated: 1579818133
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_Stream_Straight_02_Convex
+    6.asset
+  uploadId: 645704

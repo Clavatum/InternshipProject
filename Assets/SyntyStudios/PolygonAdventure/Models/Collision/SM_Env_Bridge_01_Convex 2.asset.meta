@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 20bfed283c055304db67683922d8a3b7
+timeCreated: 1579816382
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_Bridge_01_Convex
+    2.asset
+  uploadId: 645704

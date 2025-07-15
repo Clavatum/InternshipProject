@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 3669b3e14d360e84eb8ae54351ebdc70
+timeCreated: 1580700821
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_House_Door_04_Convex
+    1.asset
+  uploadId: 645704

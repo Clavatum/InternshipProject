@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 67a73f5a849d6c240b647e9322bf34a9
+timeCreated: 1547159160
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Letter_Apostrophe_01.prefab
+  uploadId: 645704

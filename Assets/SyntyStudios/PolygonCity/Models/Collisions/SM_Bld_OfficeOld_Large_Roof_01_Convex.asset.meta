@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1e4b2ab1a84a4c842b0e9a9a54af1681
+timeCreated: 1579742548
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Bld_OfficeOld_Large_Roof_01_Convex.asset
+  uploadId: 645704

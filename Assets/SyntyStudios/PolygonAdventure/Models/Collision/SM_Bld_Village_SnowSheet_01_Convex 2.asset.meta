@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 99d71138a3d37be44ada2b3868b490a6
+timeCreated: 1579812221
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Bld_Village_SnowSheet_01_Convex
+    2.asset
+  uploadId: 645704

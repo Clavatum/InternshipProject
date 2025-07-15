@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e6bc6bc354b68f74dbf9beb47905696f
+timeCreated: 1579812394
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Bld_Fence_01_Convex
+    1.asset
+  uploadId: 645704

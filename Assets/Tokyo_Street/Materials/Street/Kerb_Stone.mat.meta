@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7dd82bbb85282a0499e34237c6a42add
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/Street/Kerb_Stone.mat
+  uploadId: 631600

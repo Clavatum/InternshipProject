@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 960efbd1b805a5343b445de1af98428e
+timeCreated: 1517344945
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Materials/FX/PolygonPrototype_FX_Default.mat
+  uploadId: 645704

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: aa962c1cf7749bd4d9f5c7bac5be7f6d
+timeCreated: 1547159155
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Number_3_01.prefab
+  uploadId: 645704

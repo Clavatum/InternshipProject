@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 435ff12e10f975749aaa3b97a147abad
+timeCreated: 1579814939
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Prop_Basket_01_Convex
+    1.asset
+  uploadId: 645704

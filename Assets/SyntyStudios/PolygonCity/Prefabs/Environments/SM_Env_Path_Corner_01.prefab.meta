@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d72fe3432e380494fb2ba7535c0e3fac
+timeCreated: 1499290743
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Prefabs/Environments/SM_Env_Path_Corner_01.prefab
+  uploadId: 645704

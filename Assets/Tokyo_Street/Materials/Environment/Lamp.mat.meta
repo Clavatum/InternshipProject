@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4dd29e3c8044a8d48bc78e4b4d71f074
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/Environment/Lamp.mat
+  uploadId: 631600

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 53de18866d12f2945aa8750ece1cfde0
+timeCreated: 1547159169
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Cup_01.prefab
+  uploadId: 645704

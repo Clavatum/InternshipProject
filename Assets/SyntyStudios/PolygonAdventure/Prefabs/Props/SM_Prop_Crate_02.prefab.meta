@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b02bc145bce4ede4da8151c54b21e0e0
+timeCreated: 1484281210
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Crate_02.prefab
+  uploadId: 645704

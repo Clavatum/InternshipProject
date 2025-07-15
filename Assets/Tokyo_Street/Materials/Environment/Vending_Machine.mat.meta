@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 70a4ff503af272b4daf6834f76c5331f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/Environment/Vending_Machine.mat
+  uploadId: 631600

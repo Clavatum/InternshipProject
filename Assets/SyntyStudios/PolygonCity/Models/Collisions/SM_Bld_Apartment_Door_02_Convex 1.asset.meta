@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 0bf3231230a23ba4b8a0c9497a64893c
+timeCreated: 1579741815
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Bld_Apartment_Door_02_Convex
+    1.asset
+  uploadId: 645704

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4776f1974c8368c4cb9de03c344498a9
+timeCreated: 1580700591
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_House_Tower_01_Snow_Convex.asset
+  uploadId: 645704

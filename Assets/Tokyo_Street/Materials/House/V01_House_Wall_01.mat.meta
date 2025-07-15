@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ef5acd3b9f8a2bd4497e4b883b73eab0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/House/V01_House_Wall_01.mat
+  uploadId: 631600

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 2c6386a5d6dc44046b794c88c40000aa
+timeCreated: 1580700860
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_House_RoomRound_02_Convex
+    1.asset
+  uploadId: 645704

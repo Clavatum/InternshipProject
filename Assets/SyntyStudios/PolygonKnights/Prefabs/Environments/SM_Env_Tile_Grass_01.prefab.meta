@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bc6b7d6f0fb98544a873a3d69729fe66
+timeCreated: 1487205331
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Prefabs/Environments/SM_Env_Tile_Grass_01.prefab
+  uploadId: 645704

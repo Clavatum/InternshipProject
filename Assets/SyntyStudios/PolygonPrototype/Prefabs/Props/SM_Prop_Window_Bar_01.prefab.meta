@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4d0398b83ac8e4f449ea26570a62f787
+timeCreated: 1547425392
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Props/SM_Prop_Window_Bar_01.prefab
+  uploadId: 645704

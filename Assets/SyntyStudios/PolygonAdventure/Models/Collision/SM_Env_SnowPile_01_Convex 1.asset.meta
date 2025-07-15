@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b60467e09c347d14eb98aec4a1beccc3
+timeCreated: 1579815433
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_SnowPile_01_Convex
+    1.asset
+  uploadId: 645704

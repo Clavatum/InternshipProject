@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 810735e12d93cac4da82fa5cdbfd5e7b
+timeCreated: 1579742248
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Bld_OfficeOld_Small_02_Convex
+    1.asset
+  uploadId: 645704

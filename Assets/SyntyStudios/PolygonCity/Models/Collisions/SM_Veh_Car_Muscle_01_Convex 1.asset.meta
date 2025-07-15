@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 164801fa5f6e51f4ea2c7655d76a2e26
+timeCreated: 1580418866
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Veh_Car_Muscle_01_Convex
+    1.asset
+  uploadId: 645704

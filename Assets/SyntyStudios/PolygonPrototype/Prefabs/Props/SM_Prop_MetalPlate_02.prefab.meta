@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 082e2c0af8874a44dae3434e8d9bf93c
+timeCreated: 1547159225
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Props/SM_Prop_MetalPlate_02.prefab
+  uploadId: 645704

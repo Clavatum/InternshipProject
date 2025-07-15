@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e52bd8d8a38b02243886675705c6d40e
+timeCreated: 1547159183
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Icons/SM_Icon_Weather_Moon_01.prefab
+  uploadId: 645704

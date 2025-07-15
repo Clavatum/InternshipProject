@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4acc8aea0f8e2a8478f32ed296d7152a
+timeCreated: 1547159227
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Props/SM_Prop_Pipe_04.prefab
+  uploadId: 645704

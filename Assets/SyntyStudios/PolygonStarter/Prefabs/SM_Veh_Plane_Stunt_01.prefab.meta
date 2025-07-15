@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: bbea6872df405a045862b0d1f277c5ac
+timeCreated: 1572322131
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonStarter/Prefabs/SM_Veh_Plane_Stunt_01.prefab
+  uploadId: 645704

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aafc04a58ef99ea47b135f13b75f333d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/House/Wall_Tile.mat
+  uploadId: 631600

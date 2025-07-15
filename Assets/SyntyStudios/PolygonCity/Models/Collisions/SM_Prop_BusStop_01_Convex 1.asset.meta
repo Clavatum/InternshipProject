@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b6790cc5d28edd94a965e002d8422428
+timeCreated: 1579752313
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_BusStop_01_Convex
+    1.asset
+  uploadId: 645704

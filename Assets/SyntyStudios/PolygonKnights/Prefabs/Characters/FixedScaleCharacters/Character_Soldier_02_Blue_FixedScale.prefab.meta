@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2e75b803e4467054788c11f49c6c098f
+timeCreated: 1545086290
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Prefabs/Characters/FixedScaleCharacters/Character_Soldier_02_Blue_FixedScale.prefab
+  uploadId: 645704

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 359a3881d0d0e4143a67b57d6482e854
+timeCreated: 1487632438
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Prefabs/Characters/Character_Knight_01_Yellow.prefab
+  uploadId: 645704

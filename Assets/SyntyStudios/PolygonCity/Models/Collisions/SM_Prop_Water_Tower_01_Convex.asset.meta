@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9f80b934a236a8d439ef46fd500c45e1
+timeCreated: 1579742677
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_Water_Tower_01_Convex.asset
+  uploadId: 645704

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 22d9af586ef4a6149be2e7f541bfd2e7
+timeCreated: 1547092419
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Buildings/SM_Buildings_WindowGlass_01.prefab
+  uploadId: 645704

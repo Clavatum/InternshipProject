@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4a7a52b7f28c15546a7be65c3f2250a9
+timeCreated: 1580701112
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Env_Canal_03_Convex.asset
+  uploadId: 645704

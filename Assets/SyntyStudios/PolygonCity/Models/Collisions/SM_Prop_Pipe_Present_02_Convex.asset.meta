@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9bf62cb849508fe4980ba4b671b8a675
+timeCreated: 1579739076
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_Pipe_Present_02_Convex.asset
+  uploadId: 645704

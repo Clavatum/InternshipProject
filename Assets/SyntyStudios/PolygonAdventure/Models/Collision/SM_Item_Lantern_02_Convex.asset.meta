@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7cfde008d63912f4a80b6962bc7408c4
+timeCreated: 1579814411
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Item_Lantern_02_Convex.asset
+  uploadId: 645704

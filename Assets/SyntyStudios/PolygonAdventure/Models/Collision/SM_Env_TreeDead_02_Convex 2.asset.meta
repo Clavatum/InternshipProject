@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 180a6949202a5b74ea5c313e74631b00
+timeCreated: 1579813396
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_TreeDead_02_Convex
+    2.asset
+  uploadId: 645704

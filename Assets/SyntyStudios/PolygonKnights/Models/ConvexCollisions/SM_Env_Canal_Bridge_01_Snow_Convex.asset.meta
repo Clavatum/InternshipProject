@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2674e80615d946c46b66563409aa37fa
+timeCreated: 1580701007
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Env_Canal_Bridge_01_Snow_Convex.asset
+  uploadId: 645704

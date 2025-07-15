@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 617c7e2b14c38da47b2a3e63f9e6ccf2
+timeCreated: 1545086290
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Prefabs/Characters/FixedScaleCharacters/Character_Knight_01_Yellow_FixedScale.prefab
+  uploadId: 645704

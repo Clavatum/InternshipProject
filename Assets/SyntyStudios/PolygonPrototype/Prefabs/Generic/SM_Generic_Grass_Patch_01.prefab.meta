@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: aaa9fac6c56c64d4eaceb647b35c69ed
+timeCreated: 1547159230
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Generic/SM_Generic_Grass_Patch_01.prefab
+  uploadId: 645704

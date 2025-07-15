@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a425d6179c7b4e045925dd078909c5d9
+timeCreated: 1499290746
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Prefabs/Props/SM_Prop_Planter_02.prefab
+  uploadId: 645704

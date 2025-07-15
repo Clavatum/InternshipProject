@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 117df85c45a3e5f42a3a14a77e1273fc
+timeCreated: 1580700189
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Prop_Cart_01_Convex.asset
+  uploadId: 645704

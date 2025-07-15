@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9130a9a8028816b47aed116a6a0a5ea9
+timeCreated: 1579814893
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Prop_Washingline_01_Convex.asset
+  uploadId: 645704

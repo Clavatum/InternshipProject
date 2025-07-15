@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8385b5d2216332940bc665cd517a4e3b
+timeCreated: 1484514006
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Environments/SM_Env_SnowPile_01.prefab
+  uploadId: 645704

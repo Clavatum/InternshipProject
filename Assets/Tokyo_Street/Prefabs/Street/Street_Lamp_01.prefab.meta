@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d77e447c8275ced48a1b6dba5fa660df
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Prefabs/Street/Street_Lamp_01.prefab
+  uploadId: 631600

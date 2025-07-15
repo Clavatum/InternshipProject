@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: da95f7d3c32f0ae409c0d2c1c8b88511
+timeCreated: 1484187667
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Characters/Character_Shopkeeper_White.prefab
+  uploadId: 645704

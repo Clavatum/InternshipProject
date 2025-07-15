@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e40e7ea9354330d4ca5ac23056ae5de1
+timeCreated: 1484281207
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Prefabs/Props/SM_Prop_Sack_01.prefab
+  uploadId: 645704

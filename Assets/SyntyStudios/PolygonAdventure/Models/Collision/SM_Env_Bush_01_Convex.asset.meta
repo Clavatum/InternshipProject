@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6e2b6d0f9024a3c438a7a5c602cbaf80
+timeCreated: 1579812930
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_Bush_01_Convex.asset
+  uploadId: 645704

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e308ad70bb070dd41a0c97e5d8548173
+timeCreated: 1547175132
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Scenes/Demo.unity
+  uploadId: 645704

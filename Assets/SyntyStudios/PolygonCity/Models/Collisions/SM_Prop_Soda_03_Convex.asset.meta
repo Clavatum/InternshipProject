@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d21898f357d4c2642b7635d08fde7301
+timeCreated: 1579739039
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Prop_Soda_03_Convex.asset
+  uploadId: 645704

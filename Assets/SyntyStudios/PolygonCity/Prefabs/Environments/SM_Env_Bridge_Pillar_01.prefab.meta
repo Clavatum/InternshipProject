@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b319c45f7bb0a5f49a903d4b26bdcd4b
+timeCreated: 1499290752
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Prefabs/Environments/SM_Env_Bridge_Pillar_01.prefab
+  uploadId: 645704

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 06c1f8f114e362a40a4c6a29c518c61d
+timeCreated: 1547159214
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Primitives/SM_Primitive_Sphere_01.prefab
+  uploadId: 645704

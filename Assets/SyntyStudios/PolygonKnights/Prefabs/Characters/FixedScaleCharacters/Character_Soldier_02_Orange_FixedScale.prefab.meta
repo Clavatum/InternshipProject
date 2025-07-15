@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e29b7534c7a519f4896a43415b178317
+timeCreated: 1545086292
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Prefabs/Characters/FixedScaleCharacters/Character_Soldier_02_Orange_FixedScale.prefab
+  uploadId: 645704

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f9c5c5c870535fb48b0849bf33a79ab4
+timeCreated: 1547410430
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonPrototype/Prefabs/Generic/SM_Generic_Water_Plane_02.prefab
+  uploadId: 645704

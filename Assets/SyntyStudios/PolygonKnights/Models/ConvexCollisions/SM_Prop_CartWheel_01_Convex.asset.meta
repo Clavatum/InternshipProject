@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8ea09d2e3ed408246b67386f016371ed
+timeCreated: 1580700182
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Prop_CartWheel_01_Convex.asset
+  uploadId: 645704

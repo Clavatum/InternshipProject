@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 24178269aee50fa45af0c61018153ba6
+timeCreated: 1572398896
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonStarter/Materials/Misc/PolygonStarter_Clouds_Mat.mat
+  uploadId: 645704

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c8f44e37f61a2ca448d703b0f19a6ab6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 228474
+  packageName: Tokyo Street
+  packageVersion: 1.1
+  assetPath: Assets/Tokyo_Street/Materials/House/Interior_Door.mat
+  uploadId: 631600

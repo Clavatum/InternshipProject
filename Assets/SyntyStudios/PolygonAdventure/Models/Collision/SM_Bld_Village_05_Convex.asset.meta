@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 291c8d04a7462d942850d90230c2bfe5
+timeCreated: 1579755648
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Bld_Village_05_Convex.asset
+  uploadId: 645704

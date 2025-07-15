@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 90cbedc6e3cc2b144bd30c0e314cb57c
+timeCreated: 1579813193
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Env_Pebble_03_Convex.asset
+  uploadId: 645704

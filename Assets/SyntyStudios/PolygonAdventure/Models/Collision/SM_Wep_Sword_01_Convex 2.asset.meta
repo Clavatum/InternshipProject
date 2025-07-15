@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 46f7ea9dd1f0e1743991d4b1d37aa0ae
+timeCreated: 1579815252
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonAdventure/Models/Collision/SM_Wep_Sword_01_Convex
+    2.asset
+  uploadId: 645704

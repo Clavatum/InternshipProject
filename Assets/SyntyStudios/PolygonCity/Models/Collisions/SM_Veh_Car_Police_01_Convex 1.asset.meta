@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 63682fe02b40f2141afa2ac54260cd37
+timeCreated: 1580418780
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonCity/Models/Collisions/SM_Veh_Car_Police_01_Convex
+    1.asset
+  uploadId: 645704

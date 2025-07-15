@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 3697fc6ee476e41448feb85276b5c46e
+timeCreated: 1580701169
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207048
+  packageName: POLYGON - Sampler Pack
+  packageVersion: 1.1.0
+  assetPath: Assets/SyntyStudios/PolygonKnights/Models/ConvexCollisions/SM_Bld_Tent_02_Convex
+    1.asset
+  uploadId: 645704
