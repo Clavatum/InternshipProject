@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class CleaningTool : MonoBehaviour
 {
     public WindowStateMachine windowStateMachine;
-
+    [SerializeField] UnityEvent OnToolUsed;
     private List<Vector2Int> usableBrushPixelPositions = new List<Vector2Int>();
     private Coroutine currentCoroutine;
 
@@ -38,13 +39,12 @@ public class CleaningTool : MonoBehaviour
         {
             if (IsContinuous)
             {
-                Debug.Log("continuous tool usage started");
                 isCleaningActive = true;
                 currentCoroutine = StartCoroutine(ContinuousCleaning());
                 return;
             }
-            Debug.Log("not continuous tool usage started");
             Convert();
+            isCleaningActive = false;
         }
     }
 
@@ -61,7 +61,6 @@ public class CleaningTool : MonoBehaviour
     {
         if (isCleaningActive && currentCoroutine != null)
         {
-            Debug.Log("continuous tool usage stopped");
             StopCoroutine(currentCoroutine);
             currentCoroutine = null;
             isCleaningActive = false;
@@ -95,26 +94,28 @@ public class CleaningTool : MonoBehaviour
             return;
         }
 
-        Window window = hit.transform.GetComponentInChildren<Window>();
-        if (window == null)
+        WindowState windowState = hit.transform.GetComponentInChildren<WindowState>();
+        if (windowState == null)
         {
             Debug.Log("Hit object is not a window.");
             return;
         }
+        windowStateMachine = hit.transform.GetComponentInChildren<WindowStateMachine>();
+        float convertedPercentage = windowState.CalculateConvertedPercentage();
+        Debug.Log("converted percentage: " + convertedPercentage);
 
-        float convertedPercentage = window.CalculateConvertedPercentage();
-
-        if (!window.CanUseTool(this) || convertedPercentage == 100f)
+        if (!windowState.CanUseTool(this))
         {
-            Debug.Log("Cleaning not allowed or already 100% clean.");
+            Debug.Log("Cannot use that tool right now");
             return;
         }
 
+        OnToolUsed?.Invoke();
         isCleaningActive = true;
         Debug.Log("Cleaning started");
 
         Vector2 textureCoord = hit.textureCoord;
-        Texture2D mask = (Texture2D)window.CopyOfMaterialToWorkOn.GetTexture("_Mask");
+        Texture2D mask = (Texture2D)windowState.CopyOfMaterialToWorkOn.GetTexture("_Mask");
         Vector2Int hitPoint = new Vector2Int(
             (int)(textureCoord.x * mask.width),
             (int)(textureCoord.y * mask.height)
@@ -143,33 +144,33 @@ public class CleaningTool : MonoBehaviour
                 continue;
 
             mask.SetPixel(targetX, targetY, clear);
+            int pixelIndex = targetY * maskWidth + targetX;
+            windowState.pixels[pixelIndex] = clear;
             pixelsChanged = true;
         }
 
         if (pixelsChanged)
         {
             mask.Apply();
-            Debug.Log(convertedPercentage = window.CalculateConvertedPercentage());
         }
 
-        if (convertedPercentage == 100f)
+        if (convertedPercentage > 95f)
         {
-            isCompleted = true;
-            window.ChangeMaterial();
-
-            if (window.NextState != null)
+            if (windowState.NextState != null)
             {
-                windowStateMachine.ChangeState(window.NextState);
-                Debug.Log("State advanced to: " + window.NextState.StateName);
+                windowStateMachine.ChangeState(windowState.NextState);
+                Debug.Log("State advanced to: " + windowState.NextState.StateName, windowStateMachine);
             }
             else
             {
-                Debug.Log("Final state reached: " + window.StateName);
+                Debug.Log("Final state reached: " + windowState.StateName);
             }
+            isCompleted = true;
+            windowState.ChangeMaterial();
+            convertedPercentage = 0f;
+
             Debug.Log("Window fully cleaned. State changed.");
         }
-
-        isCleaningActive = false;
     }
 
     private Vector2 RotatePoint(Vector2 point, float angleRad, Vector2 pivot)
@@ -183,7 +184,6 @@ public class CleaningTool : MonoBehaviour
         );
         return rotated + pivot;
     }
-
 
     public static bool IsBlackEnough(Color color, float threshold = 0.1f) => color.r <= threshold && color.g <= threshold && color.b <= threshold;
 }

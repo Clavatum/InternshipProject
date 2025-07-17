@@ -1,21 +1,23 @@
-using System;
-using System.Linq;
 using UnityEngine;
 
-public class Window : MonoBehaviour
+public class WindowState : MonoBehaviour
 {
+    public Color[] pixels;
     public Material MaterialToWorkOn;
     public Material CopyOfMaterialToWorkOn { get; private set; } = null;
-
     [SerializeField] private string PermittedToolName;
-    public Window NextState;
+    public WindowState NextState;
     public string StateName => gameObject.name;
+    private int convertedPixelCount;
 
     void Awake()
     {
         CopyOfMaterialToWorkOn = new Material(MaterialToWorkOn);
-
-        CopyOfMaterialToWorkOn.SetTexture("_Mask", CopyTexture(MaterialToWorkOn.GetTexture("_Mask")));
+        if (MaterialToWorkOn.HasTexture("_Mask"))
+        {
+            CopyOfMaterialToWorkOn.SetTexture("_Mask", CopyTexture(MaterialToWorkOn.GetTexture("_Mask")));
+            pixels = ((Texture2D)CopyOfMaterialToWorkOn.GetTexture("_Mask")).GetPixels();
+        }
 
         MeshRenderer meshRenderer = transform.GetComponentInParent<MeshRenderer>();
         meshRenderer.material = CopyOfMaterialToWorkOn;
@@ -30,10 +32,7 @@ public class Window : MonoBehaviour
 
     public bool CanUseTool(CleaningTool cleaningTool)
     {
-        if (string.IsNullOrEmpty(PermittedToolName))
-            return false;
-
-        return cleaningTool.transform.parent.name == PermittedToolName;
+        return cleaningTool.transform.parent.gameObject.name == PermittedToolName;
     }
 
     public void ChangeMaterial()
@@ -46,9 +45,7 @@ public class Window : MonoBehaviour
 
     public float CalculateConvertedPercentage()
     {
-        Color[] pixels = ((Texture2D)CopyOfMaterialToWorkOn.GetTexture("_Mask")).GetPixels();
-
-        int convertedPixelCount = 0;
+        convertedPixelCount = 0;
         foreach (Color pixel in pixels)
         {
             if (CleaningTool.IsBlackEnough(pixel))

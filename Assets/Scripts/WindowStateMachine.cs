@@ -2,18 +2,26 @@ using UnityEngine;
 
 public class WindowStateMachine : MonoBehaviour
 {
-    public Window CurrentState { get; private set; }
+    public WindowState CurrentState;
 
-    public void ChangeState(Window nextState)
+    void Start()
     {
-        Debug.Log($"Changing state from {CurrentState?.name} to {nextState?.name}");
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<WindowState>() != null)
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
+        CurrentState.gameObject.SetActive(true);
+    }
 
-        if (CurrentState != null)
-            CurrentState.gameObject.SetActive(false);
 
-        if (nextState != null)
-            nextState.gameObject.SetActive(true);
-
+    public void ChangeState(WindowState nextState)
+    {
+        Debug.Log("state changed");
+        CurrentState.gameObject.SetActive(false);
+        nextState.gameObject.SetActive(true);
         CurrentState = nextState;
     }
 }
