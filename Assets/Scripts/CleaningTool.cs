@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class CleaningTool : MonoBehaviour
 {
@@ -97,22 +96,20 @@ public class CleaningTool : MonoBehaviour
         WindowState windowState = hit.transform.GetComponentInChildren<WindowState>();
         if (windowState == null)
         {
-            Debug.Log("Hit object is not a window.");
             return;
         }
+
         windowStateMachine = hit.transform.GetComponentInChildren<WindowStateMachine>();
         float convertedPercentage = windowState.CalculateConvertedPercentage();
         Debug.Log("converted percentage: " + convertedPercentage);
 
         if (!windowState.CanUseTool(this))
         {
-            Debug.Log("Cannot use that tool right now");
             return;
         }
 
         OnToolUsed?.Invoke();
         isCleaningActive = true;
-        Debug.Log("Cleaning started");
 
         Vector2 textureCoord = hit.textureCoord;
         Texture2D mask = (Texture2D)windowState.CopyOfMaterialToWorkOn.GetTexture("_Mask");
@@ -123,11 +120,11 @@ public class CleaningTool : MonoBehaviour
 
         int maskWidth = mask.width;
         int maskHeight = mask.height;
-        Vector2 brushCenter = new Vector2(brushHalfWidth, brushHalfHeight);
-        Vector2 pivot = brushCenter;
 
-        float angleDegrees = transform.parent.eulerAngles.z;
-        float angleRad = angleDegrees * Mathf.Deg2Rad;
+        float toolRotation = transform.eulerAngles.z;
+
+        float angleRad = -toolRotation * Mathf.Deg2Rad;
+        Vector2 pivot = new Vector2(brushHalfWidth, brushHalfHeight);
 
         bool pixelsChanged = false;
         Color clear = Color.clear;
@@ -135,10 +132,13 @@ public class CleaningTool : MonoBehaviour
         foreach (var brushPos in usableBrushPixelPositions)
         {
             Vector2 rotated = RotatePoint(brushPos, angleRad, pivot);
-            Vector2Int rotatedPos = new Vector2Int(Mathf.RoundToInt(rotated.x), Mathf.RoundToInt(rotated.y));
+            Vector2Int rotatedPos = new Vector2Int(
+                Mathf.RoundToInt(rotated.x),
+                Mathf.RoundToInt(rotated.y)
+            );
 
-            int targetX = hitPoint.x - brushHalfWidth + rotatedPos.x;
-            int targetY = hitPoint.y - brushHalfHeight + rotatedPos.y;
+            int targetX = hitPoint.x - brushHalfWidth + rotatedPos.y;
+            int targetY = hitPoint.y - brushHalfHeight + rotatedPos.x;
 
             if (targetX < 0 || targetX >= maskWidth || targetY < 0 || targetY >= maskHeight)
                 continue;
@@ -156,20 +156,9 @@ public class CleaningTool : MonoBehaviour
 
         if (convertedPercentage > 95f)
         {
-            if (windowState.NextState != null)
-            {
-                windowStateMachine.ChangeState(windowState.NextState);
-                Debug.Log("State advanced to: " + windowState.NextState.StateName, windowStateMachine);
-            }
-            else
-            {
-                Debug.Log("Final state reached: " + windowState.StateName);
-            }
-            isCompleted = true;
+            windowStateMachine.ChangeState(windowState.NextState);
             windowState.ChangeMaterial();
-            convertedPercentage = 0f;
-
-            Debug.Log("Window fully cleaned. State changed.");
+            isCompleted = true;
         }
     }
 

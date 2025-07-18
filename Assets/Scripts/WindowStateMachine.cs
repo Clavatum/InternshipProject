@@ -16,7 +16,6 @@ public class WindowStateMachine : MonoBehaviour
         CurrentState.gameObject.SetActive(true);
     }
 
-
     public void ChangeState(WindowState nextState)
     {
         Debug.Log("state changed");

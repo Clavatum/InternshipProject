@@ -3,6 +3,7 @@ using UnityEngine;
 public class WindowState : MonoBehaviour
 {
     public Color[] pixels;
+    MeshRenderer meshRenderer;
     public Material MaterialToWorkOn;
     public Material CopyOfMaterialToWorkOn { get; private set; } = null;
     [SerializeField] private string PermittedToolName;
@@ -12,14 +13,14 @@ public class WindowState : MonoBehaviour
 
     void Awake()
     {
+        meshRenderer = transform.GetComponentInParent<MeshRenderer>();
+
         CopyOfMaterialToWorkOn = new Material(MaterialToWorkOn);
         if (MaterialToWorkOn.HasTexture("_Mask"))
         {
             CopyOfMaterialToWorkOn.SetTexture("_Mask", CopyTexture(MaterialToWorkOn.GetTexture("_Mask")));
             pixels = ((Texture2D)CopyOfMaterialToWorkOn.GetTexture("_Mask")).GetPixels();
         }
-
-        MeshRenderer meshRenderer = transform.GetComponentInParent<MeshRenderer>();
         meshRenderer.material = CopyOfMaterialToWorkOn;
     }
 
@@ -37,10 +38,7 @@ public class WindowState : MonoBehaviour
 
     public void ChangeMaterial()
     {
-        if (NextState != null && NextState.MaterialToWorkOn != null)
-        {
-            MaterialToWorkOn = NextState.MaterialToWorkOn;
-        }
+        meshRenderer.material = NextState.CopyOfMaterialToWorkOn;
     }
 
     public float CalculateConvertedPercentage()
