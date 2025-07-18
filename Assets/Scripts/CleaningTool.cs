@@ -13,6 +13,7 @@ public class CleaningTool : MonoBehaviour
     [SerializeField] private Texture2D brush;
     [SerializeField] private float rayLength;
     [SerializeField] private float cleaningCooldown = 0.05f;
+    [SerializeField] private float convertedTreshhold = 98f;
 
     private int brushHalfWidth;
     private int brushHalfHeight;
@@ -154,7 +155,7 @@ public class CleaningTool : MonoBehaviour
             mask.Apply();
         }
 
-        if (convertedPercentage > 95f)
+        if (convertedPercentage >= convertedTreshhold)
         {
             windowStateMachine.ChangeState(windowState.NextState);
             windowState.ChangeMaterial();
