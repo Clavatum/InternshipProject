@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,10 +22,18 @@ public class CleaningTool : MonoBehaviour
 
     private bool isCleaningActive = false;
     public bool IsContinuous;
-    private bool isCompleted = false;
+
+    [Header("ToolPositionSetings")]
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
+    [SerializeField] private float resetDuration = 1.5f;
+    [SerializeField] private AnimationCurve easingCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+    private Coroutine resetCoroutine;
 
     void Awake()
     {
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
         CacheEffectiveBrushPixels();
     }
 
@@ -159,7 +169,6 @@ public class CleaningTool : MonoBehaviour
         {
             windowStateMachine.ChangeState(windowState.NextState);
             windowState.ChangeMaterial();
-            isCompleted = true;
         }
     }
 
@@ -176,4 +185,35 @@ public class CleaningTool : MonoBehaviour
     }
 
     public static bool IsBlackEnough(Color color, float threshold = 0.1f) => color.r <= threshold && color.g <= threshold && color.b <= threshold;
+
+    public void ResetTransformSmoothly()
+    {
+        if (resetCoroutine != null)
+        {
+            StopCoroutine(resetCoroutine);
+        }
+        resetCoroutine = StartCoroutine(SmoothReturn());
+    }
+    private IEnumerator SmoothReturn()
+    {
+        Vector3 startPosition = transform.position;
+        Quaternion startRotation = transform.rotation;
+
+        float elapsed = 0f;
+
+        while (elapsed < resetDuration)
+        {
+            float t = elapsed / resetDuration;
+            float curveT = easingCurve.Evaluate(t);
+
+            transform.position = Vector3.Lerp(startPosition, initialPosition, curveT);
+            transform.rotation = Quaternion.Slerp(startRotation, initialRotation, curveT);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = initialPosition;
+        transform.rotation = initialRotation;
+        resetCoroutine = null;
+    }
 }
