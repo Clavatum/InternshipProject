@@ -3,16 +3,19 @@ using UnityEngine;
 public class WindowState : MonoBehaviour
 {
     public Color[] pixels;
-    MeshRenderer meshRenderer;
+    private MeshRenderer meshRenderer;
     public Material MaterialToWorkOn;
     public Material CopyOfMaterialToWorkOn { get; private set; } = null;
     [SerializeField] private string PermittedToolName;
     public WindowState NextState;
+    public GameEndState gameEndState;
     public string StateName => gameObject.name;
     private int convertedPixelCount;
 
     void Awake()
     {
+        gameEndState.totalDirtyWindowCount++;
+
         meshRenderer = transform.GetComponentInParent<MeshRenderer>();
 
         CopyOfMaterialToWorkOn = new Material(MaterialToWorkOn);
@@ -39,6 +42,7 @@ public class WindowState : MonoBehaviour
     public void ChangeMaterial()
     {
         meshRenderer.material = NextState.CopyOfMaterialToWorkOn;
+        gameEndState.totalCleanedWindowCount++;
     }
 
     public float CalculateConvertedPercentage()
