@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float moveSpeed;
+    private bool isMovingUpward;
+    private bool isMovingLeft;
+    private bool isMovingHorizontally = false;
+    private bool isMovingVertically = false;
 
-    [Header("Clamp Settings")]
+    [Header("Boundries")]
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
     [SerializeField] private float minY;
@@ -15,21 +19,30 @@ public class Elevator : MonoBehaviour
     [SerializeField] private AudioClip elevatorStartClip;
     [SerializeField] private AudioClip elevatorEndClip;
 
-    void Awake()
+    void Update()
     {
-        audioSource = gameObject.GetComponent<AudioSource>();
+        if (isMovingHorizontally)
+        {
+            MoveElevatorHorizontally();
+        }
+
+        if (isMovingVertically)
+        {
+            MoveElevatorVertically();
+        }
     }
 
     private void ClampPosition()
     {
-        Vector3 position = transform.position;
+        Vector3 position = transform.localPosition;
         position.x = Mathf.Clamp(position.x, minX, maxX);
         position.y = Mathf.Clamp(position.y, minY, maxY);
-        transform.position = position;
+        transform.localPosition = position;
     }
 
     public void PlayStartClip()
     {
+        audioSource.Stop();
         audioSource.loop = true;
         audioSource.clip = elevatorStartClip;
         audioSource.Play();
@@ -37,30 +50,47 @@ public class Elevator : MonoBehaviour
 
     public void PlayEndClip()
     {
+        audioSource.Stop();
         audioSource.loop = false;
         audioSource.clip = elevatorEndClip;
         audioSource.Play();
     }
 
-    public void MoveElevatorUp()
+    public void SetHorizontalMovement(bool isMovingLeft)
     {
-        transform.position = Vector2.MoveTowards(transform.position, Vector2.up, moveSpeed * Time.deltaTime);
-        ClampPosition();
+        this.isMovingLeft = isMovingLeft;
+        isMovingHorizontally = true;
+        PlayStartClip();
+    }
 
-    }
-    public void MoveElevatorDown()
+    public void StopHorizontalMovement()
     {
-        transform.position = Vector2.MoveTowards(transform.position, Vector2.down, moveSpeed * Time.deltaTime);
+        isMovingHorizontally = false;
+        PlayEndClip();
+    }
+
+    public void SetVerticalMovement(bool isMovingUpward)
+    {
+        this.isMovingUpward = isMovingUpward;
+        isMovingVertically = true;
+        PlayStartClip();
+    }
+
+    public void StopVerticalMovement()
+    {
+        isMovingVertically = false;
+        PlayEndClip();
+    }
+
+    private void MoveElevatorVertically()
+    {
+        transform.Translate(moveSpeed * Time.deltaTime * (isMovingUpward ? Vector3.up : Vector3.down));
         ClampPosition();
     }
-    public void MoveElevatorLeft()
+
+    private void MoveElevatorHorizontally()
     {
-        transform.position = Vector2.MoveTowards(transform.position, Vector2.left, moveSpeed * Time.deltaTime);
-        ClampPosition();
-    }
-    public void MoveElevatorRight()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, Vector2.right, moveSpeed * Time.deltaTime);
+        transform.Translate(moveSpeed * Time.deltaTime * (isMovingLeft ? Vector3.left : Vector3.right));
         ClampPosition();
     }
 }

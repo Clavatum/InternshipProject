@@ -18,7 +18,6 @@ public class CleaningToolSFX : MonoBehaviour
             audioSource.clip = audioClip;
             audioSource.Play();
         }
-        Debug.Log("zort");
         audioSource.PlayOneShot(audioClip);
     }
 }

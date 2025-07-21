@@ -8,13 +8,13 @@ public class WindowState : MonoBehaviour
     public Material CopyOfMaterialToWorkOn { get; private set; } = null;
     [SerializeField] private string PermittedToolName;
     public WindowState NextState;
-    public GameEndState gameEndState;
+    public GameStatsManager gameStatsManager;
     public string StateName => gameObject.name;
     private int convertedPixelCount;
 
     void Awake()
     {
-        gameEndState.totalDirtyWindowCount++;
+        gameStatsManager.totalDirtyWindow++;
 
         meshRenderer = transform.GetComponentInParent<MeshRenderer>();
 
@@ -42,7 +42,7 @@ public class WindowState : MonoBehaviour
     public void ChangeMaterial()
     {
         meshRenderer.material = NextState.CopyOfMaterialToWorkOn;
-        gameEndState.totalCleanedWindowCount++;
+        gameStatsManager.totalCleanedWindow++;
     }
 
     public float CalculateConvertedPercentage()

@@ -196,6 +196,7 @@ public class CleaningTool : MonoBehaviour
     }
     private IEnumerator SmoothReturn()
     {
+        Debug.Log("Tool returned to original position");
         Vector3 startPosition = transform.position;
         Quaternion startRotation = transform.rotation;
 
