@@ -9,11 +9,15 @@ public class WindowState : MonoBehaviour
     [SerializeField] private string PermittedToolName;
     public WindowState NextState;
     public GameStatsManager gameStatsManager;
+    public InGameMenu UIManager;
     public string StateName => gameObject.name;
     private int convertedPixelCount;
 
     void Awake()
     {
+        UIManager = FindAnyObjectByType<InGameMenu>();
+        gameStatsManager = FindAnyObjectByType<GameStatsManager>();
+
         gameStatsManager.totalDirtyWindow++;
 
         meshRenderer = transform.GetComponentInParent<MeshRenderer>();
@@ -43,6 +47,7 @@ public class WindowState : MonoBehaviour
     {
         meshRenderer.material = NextState.CopyOfMaterialToWorkOn;
         gameStatsManager.totalCleanedWindow++;
+        UIManager.UpdateScore(gameStatsManager.totalCleanedWindow * gameStatsManager.prizeForEachCleanedWindow);
     }
 
     public float CalculateConvertedPercentage()

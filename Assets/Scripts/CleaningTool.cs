@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Transactions;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class CleaningTool : MonoBehaviour
 {
     public WindowStateMachine windowStateMachine;
-    [SerializeField] UnityEvent OnToolUsed;
+    public InGameMenu UIManager;
     private List<Vector2Int> usableBrushPixelPositions = new List<Vector2Int>();
     private Coroutine currentCoroutine;
 
@@ -26,14 +24,16 @@ public class CleaningTool : MonoBehaviour
     [Header("ToolPositionSetings")]
     private Vector3 initialPosition;
     private Quaternion initialRotation;
-    [SerializeField] private float resetDuration = 1.5f;
+    [SerializeField] private float resetDuration;
     [SerializeField] private AnimationCurve easingCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     private Coroutine resetCoroutine;
 
     void Awake()
     {
-        initialPosition = transform.position;
-        initialRotation = transform.rotation;
+        UIManager = FindAnyObjectByType<InGameMenu>();
+
+        initialPosition = transform.parent.position;
+        initialRotation = transform.parent.rotation;
         CacheEffectiveBrushPixels();
     }
 
@@ -111,15 +111,16 @@ public class CleaningTool : MonoBehaviour
         }
 
         windowStateMachine = hit.transform.GetComponentInChildren<WindowStateMachine>();
+
         float convertedPercentage = windowState.CalculateConvertedPercentage();
         Debug.Log("converted percentage: " + convertedPercentage);
 
         if (!windowState.CanUseTool(this))
         {
+            UIManager.SetFeedbackText("Can't use this tool right now!", Color.red, UIManager.ErrorSFX);
             return;
         }
 
-        OnToolUsed?.Invoke();
         isCleaningActive = true;
 
         Vector2 textureCoord = hit.textureCoord;
@@ -169,6 +170,12 @@ public class CleaningTool : MonoBehaviour
         {
             windowStateMachine.ChangeState(windowState.NextState);
             windowState.ChangeMaterial();
+            if (windowState.NextState == null)
+            {
+                UIManager.SetFeedbackText("Window fully cleared!", Color.green, UIManager.SuccessSFX);
+                return;
+            }
+            UIManager.SetFeedbackText("Fully applied!", Color.green, UIManager.SuccessSFX);
         }
     }
 
@@ -197,8 +204,8 @@ public class CleaningTool : MonoBehaviour
     private IEnumerator SmoothReturn()
     {
         Debug.Log("Tool returned to original position");
-        Vector3 startPosition = transform.position;
-        Quaternion startRotation = transform.rotation;
+        Vector3 startPosition = transform.parent.position;
+        Quaternion startRotation = transform.parent.rotation;
 
         float elapsed = 0f;
 
@@ -207,14 +214,14 @@ public class CleaningTool : MonoBehaviour
             float t = elapsed / resetDuration;
             float curveT = easingCurve.Evaluate(t);
 
-            transform.position = Vector3.Lerp(startPosition, initialPosition, curveT);
-            transform.rotation = Quaternion.Slerp(startRotation, initialRotation, curveT);
+            transform.parent.position = Vector3.Lerp(startPosition, initialPosition, curveT);
+            transform.parent.rotation = Quaternion.Slerp(startRotation, initialRotation, curveT);
 
             elapsed += Time.deltaTime;
             yield return null;
         }
-        transform.position = initialPosition;
-        transform.rotation = initialRotation;
+        transform.parent.position = initialPosition;
+        transform.parent.rotation = initialRotation;
         resetCoroutine = null;
     }
 }

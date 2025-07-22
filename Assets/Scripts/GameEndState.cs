@@ -3,8 +3,15 @@ using UnityEngine;
 public class GameEndState : MonoBehaviour
 {
     public GameStatsManager gameStatsManager;
+    public InGameMenu UIManager;
     [SerializeField] private float totalTime;
     private float timeLeft;
+
+    void Awake()
+    {
+        UIManager = FindAnyObjectByType<InGameMenu>();
+        gameStatsManager = FindAnyObjectByType<GameStatsManager>();
+    }
 
     void Start()
     {
@@ -14,12 +21,12 @@ public class GameEndState : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(StartTimer());
+        UIManager.ShowTimeLeft(timeLeft);
+
         if (IsGameEnded())
         {
             gameStatsManager.CalculateScore();
-            Debug.Log("Game finished!");
-            Debug.Log("Your Total Score: " + gameStatsManager.score);
+            UIManager.SetFeedbackText("Game Finished!", Color.red, UIManager.EndGameSFX);
             Time.timeScale = 0;
             timeLeft = totalTime;
         }
