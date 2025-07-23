@@ -13,4 +13,7 @@ public class GameStatsManager : MonoBehaviour
     {
         score = totalCleanedWindow * prizeForEachCleanedWindow + (int)(gameEndState.StartTimer() * prizeForTimeLeft);
     }
+
+    public void SetScore() => PlayerPrefs.SetInt("Score", score);
+    public int GetScore() => PlayerPrefs.GetInt("Score", 0);
 }
