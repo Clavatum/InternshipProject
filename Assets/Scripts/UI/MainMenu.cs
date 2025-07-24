@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
 
     private float messageDuration = 1f;
 
-    #region - Button Events - 
+    #region - UI Events - 
 
     public void ShopButton()
     {

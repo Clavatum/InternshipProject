@@ -26,6 +26,8 @@ public class Settings : MonoBehaviour
         ApplyVolumeValue(SFXAudioSource, SFXVolumeValue);
     }
 
+    #region - UI Events -
+
     public void IsSettingsPanelActive()
     {
         isSettingsPanelActive = !isSettingsPanelActive;
@@ -57,6 +59,8 @@ public class Settings : MonoBehaviour
         musicVolumeValueText.text = musicVolumeValue.ToString();
         SFXVolumeValueText.text = SFXVolumeValue.ToString();
     }
+
+    #endregion
 
     private void SetBoundries()
     {
