@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class CleaningTool : MonoBehaviour
 {
     public WindowStateMachine windowStateMachine;
-    public InGameMenu UIManager;
+    private InGameStatsUI inGameStatsUI;
     private List<Vector2Int> usableBrushPixelPositions = new List<Vector2Int>();
     private Coroutine currentCoroutine;
 
@@ -22,23 +21,23 @@ public class CleaningTool : MonoBehaviour
     public bool IsContinuous;
 
     [Header("ToolPositionSetings")]
-    private Vector3 initialPosition;
-    private Quaternion initialRotation;
+    [SerializeField] private Transform originalToolTransform;
+    [HideInInspector] public Vector3 initialPosition;
+    [HideInInspector] public Quaternion initialRotation;
     [SerializeField] private float resetDuration;
     [SerializeField] private AnimationCurve easingCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     private Coroutine resetCoroutine;
 
     void Awake()
     {
-        UIManager = FindAnyObjectByType<InGameMenu>();
-
-        initialPosition = transform.parent.position;
-        initialRotation = transform.parent.rotation;
+        inGameStatsUI = FindAnyObjectByType<InGameStatsUI>();
         CacheEffectiveBrushPixels();
     }
 
     void Start()
     {
+        initialPosition = originalToolTransform.localPosition;
+        initialRotation = originalToolTransform.localRotation;
         brushHalfWidth = brush.width / 2;
         brushHalfHeight = brush.height / 2;
     }
@@ -100,7 +99,6 @@ public class CleaningTool : MonoBehaviour
     {
         if (!Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, rayLength))
         {
-            Debug.Log("No hit detected.");
             return;
         }
 
@@ -117,7 +115,7 @@ public class CleaningTool : MonoBehaviour
 
         if (!windowState.CanUseTool(this))
         {
-            UIManager.SetFeedbackText("Can't use this tool right now!", Color.red, UIManager.ErrorSFX);
+            inGameStatsUI.SetFeedbackText("Can't use this tool right now!", Color.red, inGameStatsUI.ErrorSFX);
             return;
         }
 
@@ -172,10 +170,10 @@ public class CleaningTool : MonoBehaviour
             windowState.ChangeMaterial();
             if (windowState.NextState == null)
             {
-                UIManager.SetFeedbackText("Window fully cleared!", Color.green, UIManager.SuccessSFX);
+                inGameStatsUI.SetFeedbackText("Window fully cleared!", Color.green, inGameStatsUI.SuccessSFX);
                 return;
             }
-            UIManager.SetFeedbackText("Fully applied!", Color.green, UIManager.SuccessSFX);
+            inGameStatsUI.SetFeedbackText("Fully applied!", Color.green, inGameStatsUI.SuccessSFX);
         }
     }
 
@@ -201,11 +199,11 @@ public class CleaningTool : MonoBehaviour
         }
         resetCoroutine = StartCoroutine(SmoothReturn());
     }
+
     private IEnumerator SmoothReturn()
     {
-        Debug.Log("Tool returned to original position");
-        Vector3 startPosition = transform.parent.position;
-        Quaternion startRotation = transform.parent.rotation;
+        Vector3 startPosition = transform.parent.localPosition;
+        Quaternion startRotation = transform.parent.localRotation;
 
         float elapsed = 0f;
 
@@ -214,14 +212,14 @@ public class CleaningTool : MonoBehaviour
             float t = elapsed / resetDuration;
             float curveT = easingCurve.Evaluate(t);
 
-            transform.parent.position = Vector3.Lerp(startPosition, initialPosition, curveT);
-            transform.parent.rotation = Quaternion.Slerp(startRotation, initialRotation, curveT);
+            transform.parent.localPosition = Vector3.Lerp(startPosition, initialPosition, curveT);
+            transform.parent.localRotation = Quaternion.Slerp(startRotation, initialRotation, curveT);
 
             elapsed += Time.deltaTime;
             yield return null;
         }
-        transform.parent.position = initialPosition;
-        transform.parent.rotation = initialRotation;
+        transform.parent.localPosition = initialPosition;
+        transform.parent.localRotation = initialRotation;
         resetCoroutine = null;
     }
 }
