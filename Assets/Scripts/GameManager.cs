@@ -1,12 +1,16 @@
 using UnityEngine;
 
-public class GameEndState : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
+    [Header("Class References")]
     private GameStatsManager gameStatsManager;
     private SceneController sceneController;
     private InGameStatsUI inGameStatsUI;
+
     [SerializeField] private float totalTime;
     private float timeLeft;
+
+    #region - Awake/Start/Update -
 
     void Awake()
     {
@@ -36,6 +40,8 @@ public class GameEndState : MonoBehaviour
             gameStatsManager.SetTotalPlayedTime();
         }
     }
+
+    #endregion
 
     private bool IsGameEnded()
     {

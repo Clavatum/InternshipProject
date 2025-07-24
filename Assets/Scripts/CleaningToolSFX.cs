@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class CleaningToolSFX : MonoBehaviour
 {
+    [Header("Class References")]
     private CleaningTool cleaningTool;
+
+    [Header("Audio Settings")]
     public AudioSource audioSource;
     public AudioClip audioClip;
 

@@ -2,25 +2,31 @@ using UnityEngine;
 
 public class WindowState : MonoBehaviour
 {
-    public Color[] pixels;
-    private MeshRenderer meshRenderer;
+    [Header("Class References")]
+    public WindowState NextState;
+    private GameStatsManager gameStatsManager;
+    private InGameStatsUI inGameStatsUI;
+
+    [Header("Object References")]
     public Material MaterialToWorkOn;
     public Material CopyOfMaterialToWorkOn { get; private set; } = null;
+    private MeshRenderer meshRenderer;
+
     [SerializeField] private string PermittedToolName;
-    public WindowState NextState;
-    public GameStatsManager gameStatsManager;
-    public InGameStatsUI inGameStatsUI;
-    public string StateName => gameObject.name;
+    [HideInInspector] public Color[] pixels;
     private int convertedPixelCount;
 
     void Awake()
     {
+        #region - Caching -
+
         inGameStatsUI = FindAnyObjectByType<InGameStatsUI>();
         gameStatsManager = FindAnyObjectByType<GameStatsManager>();
+        meshRenderer = transform.GetComponentInParent<MeshRenderer>();
+
+        #endregion
 
         gameStatsManager.totalDirtyWindow++;
-
-        meshRenderer = transform.GetComponentInParent<MeshRenderer>();
 
         CopyOfMaterialToWorkOn = new Material(MaterialToWorkOn);
         if (MaterialToWorkOn.HasTexture("_Mask"))
@@ -31,16 +37,13 @@ public class WindowState : MonoBehaviour
         meshRenderer.material = CopyOfMaterialToWorkOn;
     }
 
+    #region - Texture -
+
     private Texture CopyTexture(Texture texture)
     {
         Texture2D copyTexture = new(texture.width, texture.height);
         Graphics.CopyTexture(texture, copyTexture);
         return copyTexture;
-    }
-
-    public bool CanUseTool(CleaningTool cleaningTool)
-    {
-        return cleaningTool.transform.parent.gameObject.name == PermittedToolName;
     }
 
     public void ChangeMaterial()
@@ -61,5 +64,12 @@ public class WindowState : MonoBehaviour
             }
         }
         return (float)convertedPixelCount / pixels.Length * 100f;
+    }
+
+    #endregion
+
+    public bool CanUseTool(CleaningTool cleaningTool)
+    {
+        return cleaningTool.transform.parent.gameObject.name == PermittedToolName;
     }
 }

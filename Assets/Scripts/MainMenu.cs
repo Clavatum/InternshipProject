@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    [Header("Object References")]
     [SerializeField] private TextMeshProUGUI TotalPlayedTimeText;
     [SerializeField] private TextMeshProUGUI totalGoldText;
     [SerializeField] private TextMeshProUGUI feedbackText;
 
     private float messageDuration = 1f;
+
+    #region - Button Events - 
 
     public void ShopButton()
     {
@@ -16,15 +19,17 @@ public class MainMenu : MonoBehaviour
         Invoke(nameof(ClearMessage), messageDuration);
     }
 
-    private void ClearMessage()
-    {
-        feedbackText.text = "";
-        feedbackText.transform.gameObject.SetActive(false);
-    }
-
     public void ExitGame()
     {
         PlayerPrefs.Save();
         Application.Quit();
+    }
+
+    #endregion
+
+    private void ClearMessage()
+    {
+        feedbackText.text = "";
+        feedbackText.transform.gameObject.SetActive(false);
     }
 }

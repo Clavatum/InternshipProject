@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class GameStatsManager : MonoBehaviour
 {
-    public GameEndState gameEndState;
+    [Header("Class References")]
+    public GameManager gameEndState;
+
+    [Header("Stats")]
     public int totalDirtyWindow;
     public int totalCleanedWindow;
     public int score = 0;
@@ -10,10 +13,7 @@ public class GameStatsManager : MonoBehaviour
     public int prizeForTimeLeft = 10;
     public float totalPlayedTime;
 
-    public void CalculateScore()
-    {
-        score = totalCleanedWindow * prizeForEachCleanedWindow + (int)(gameEndState.StartTimer() * prizeForTimeLeft);
-    }
+    #region - Getter/Setter -
 
     public void SetScore()
     {
@@ -27,6 +27,15 @@ public class GameStatsManager : MonoBehaviour
         PlayerPrefs.SetFloat("TotalPlayedTime", totalPlayedTime);
         Save();
     }
+
     public float GetTotalPlayedTime() => PlayerPrefs.GetFloat("TotalPlayedTime", 0);
+
+    #endregion
+
+    public void CalculateScore()
+    {
+        score = totalCleanedWindow * prizeForEachCleanedWindow + (int)(gameEndState.StartTimer() * prizeForTimeLeft);
+    }
+
     public void Save() => PlayerPrefs.Save();
 }

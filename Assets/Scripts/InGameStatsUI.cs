@@ -3,17 +3,16 @@ using UnityEngine;
 
 public class InGameStatsUI : MonoBehaviour
 {
+    [Header("Object References")]
     [SerializeField] private TextMeshProUGUI feedbackText;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI timeLeftText;
-
-    [SerializeField] private float messageDuration = 2f;
-
     [SerializeField] private AudioSource SFXAudioSource;
-
     public AudioClip ErrorSFX;
     public AudioClip SuccessSFX;
     public AudioClip EndGameSFX;
+
+    [SerializeField] private float messageDuration = 2f;
 
     public void SetFeedbackText(string message, Color color, AudioClip audioClip)
     {

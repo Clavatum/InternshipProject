@@ -3,10 +3,14 @@ using UnityEngine;
 
 public class MainMenuStatsUI : MonoBehaviour
 {
+    [Header("Class References")]
     private GameStatsManager gameStatsManager;
 
+    [Header("Object References")]
     [SerializeField] private TextMeshProUGUI totalPlayedTimeText;
     [SerializeField] private TextMeshProUGUI scoreText;
+
+    #region - Awake/Start -
 
     void Awake()
     {
@@ -18,4 +22,6 @@ public class MainMenuStatsUI : MonoBehaviour
         totalPlayedTimeText.text = "Total Played Time: " + (gameStatsManager.GetTotalPlayedTime() / 60 + ":" + gameStatsManager.GetTotalPlayedTime() % 60).ToString();
         scoreText.text = "Total Gold: " + gameStatsManager.GetScore().ToString();
     }
+
+    #endregion
 }

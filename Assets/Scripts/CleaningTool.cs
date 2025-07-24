@@ -4,29 +4,35 @@ using UnityEngine;
 
 public class CleaningTool : MonoBehaviour
 {
-    public WindowStateMachine windowStateMachine;
+    [Header("Class References")]
+    private WindowStateMachine windowStateMachine;
     private InGameStatsUI inGameStatsUI;
+
     private List<Vector2Int> usableBrushPixelPositions = new List<Vector2Int>();
     private Coroutine currentCoroutine;
+    private Coroutine resetCoroutine;
 
+    [Header("Brush Settings")]
     [SerializeField] private Texture2D brush;
-    [SerializeField] private float rayLength;
-    [SerializeField] private float cleaningCooldown = 0.05f;
-    [SerializeField] private float convertedTreshhold = 98f;
-
     private int brushHalfWidth;
     private int brushHalfHeight;
 
-    private bool isCleaningActive = false;
+    [Header("Convertion Settings")]
+    [SerializeField] private float rayLength;
+    [SerializeField] private float cleaningCooldown = 0.05f;
+    [SerializeField] private float convertedTreshhold = 98f;
     public bool IsContinuous;
 
-    [Header("ToolPositionSetings")]
+    [Header("Tool Positioning Setings")]
     [SerializeField] private Transform originalToolTransform;
-    [HideInInspector] public Vector3 initialPosition;
-    [HideInInspector] public Quaternion initialRotation;
     [SerializeField] private float resetDuration;
     [SerializeField] private AnimationCurve easingCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-    private Coroutine resetCoroutine;
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
+
+    private bool isCleaningActive = false;
+
+    #region - Awake/Start -
 
     void Awake()
     {
@@ -41,6 +47,10 @@ public class CleaningTool : MonoBehaviour
         brushHalfWidth = brush.width / 2;
         brushHalfHeight = brush.height / 2;
     }
+
+    #endregion
+
+    #region - Texture Convertion -
 
     public void StartConvert()
     {
@@ -191,6 +201,10 @@ public class CleaningTool : MonoBehaviour
 
     public static bool IsBlackEnough(Color color, float threshold = 0.1f) => color.r <= threshold && color.g <= threshold && color.b <= threshold;
 
+    #endregion
+
+    #region - Tool Positioning -
+
     public void ResetTransformSmoothly()
     {
         if (resetCoroutine != null)
@@ -222,4 +236,6 @@ public class CleaningTool : MonoBehaviour
         transform.parent.localRotation = initialRotation;
         resetCoroutine = null;
     }
+
+    #endregion
 }

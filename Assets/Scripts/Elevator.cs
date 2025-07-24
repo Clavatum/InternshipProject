@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed;
+    private float moveSpeed = 0.5f;
     private bool isMovingUpward;
     private bool isMovingLeft;
     private bool isMovingHorizontally = false;
@@ -32,13 +32,7 @@ public class Elevator : MonoBehaviour
         }
     }
 
-    private void ClampPosition()
-    {
-        Vector3 position = transform.localPosition;
-        position.x = Mathf.Clamp(position.x, minX, maxX);
-        position.y = Mathf.Clamp(position.y, minY, maxY);
-        transform.localPosition = position;
-    }
+    #region - Audio -
 
     public void PlayStartClip()
     {
@@ -54,6 +48,18 @@ public class Elevator : MonoBehaviour
         audioSource.loop = false;
         audioSource.clip = elevatorEndClip;
         audioSource.Play();
+    }
+
+    #endregion
+
+    #region - Movement -
+
+    private void ClampPosition()
+    {
+        Vector3 position = transform.localPosition;
+        position.x = Mathf.Clamp(position.x, minX, maxX);
+        position.y = Mathf.Clamp(position.y, minY, maxY);
+        transform.localPosition = position;
     }
 
     public void SetHorizontalMovement(bool isMovingLeft)
@@ -93,4 +99,5 @@ public class Elevator : MonoBehaviour
         transform.Translate(moveSpeed * Time.deltaTime * (isMovingLeft ? Vector3.left : Vector3.right));
         ClampPosition();
     }
+    #endregion
 }
