@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour
     private SceneController sceneController;
     private InGameStatsUI inGameStatsUI;
 
-    [SerializeField] private float totalTime;
-    private float timeLeft;
+    [Space, SerializeField] private float totalTime;
+    public float TimeLeft { get; private set; } = 0f;
+
+    private bool IsGameEnded => TimeLeft <= 0f || gameStatsManager.totalCleanedState / 4 == gameStatsManager.totalDirtyWindow;
 
     #region - Awake/Start/Update -
 
@@ -21,35 +23,26 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        timeLeft = totalTime;
-        StartTimer();
+        TimeLeft = totalTime;
     }
 
     void Update()
     {
-        inGameStatsUI.ShowTimeLeft(timeLeft);
+        inGameStatsUI.ShowTimeLeft(TimeLeft);
 
-        if (IsGameEnded())
+        TimeLeft -= Time.deltaTime;
+
+        if (IsGameEnded)
         {
             gameStatsManager.CalculateScore();
-            inGameStatsUI.SetFeedbackText("Game Finished!", Color.red, inGameStatsUI.EndGameSFX);
+            inGameStatsUI.EndGameFeedback("Game Finished!");
             Time.timeScale = 0;
             sceneController.SetScene(0);
-            timeLeft = totalTime;
-            gameStatsManager.totalPlayedTime += timeLeft;
+            TimeLeft = 0f;
+            gameStatsManager.totalPlayedTime += TimeLeft;
             gameStatsManager.SetTotalPlayedTime();
         }
     }
 
     #endregion
-
-    private bool IsGameEnded()
-    {
-        return StartTimer() <= 0f || gameStatsManager.totalCleanedWindow == gameStatsManager.totalDirtyWindow;
-    }
-
-    public float StartTimer()
-    {
-        return timeLeft -= Time.deltaTime;
-    }
 }

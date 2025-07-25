@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InGameStatsUI : MonoBehaviour
 {
@@ -8,13 +9,20 @@ public class InGameStatsUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI timeLeftText;
     [SerializeField] private AudioSource SFXAudioSource;
-    public AudioClip ErrorSFX;
-    public AudioClip SuccessSFX;
-    public AudioClip EndGameSFX;
+    private AudioClip errorSFX;
+    private AudioClip successSFX;
+    private AudioClip endGameSFX;
+    private Button apartmentButton;
 
     [SerializeField] private float messageDuration = 2f;
 
-    public void SetFeedbackText(string message, Color color, AudioClip audioClip)
+    public bool isEnteredApartment;
+
+    public void SuccessFeedback(string message) => SetFeedbackText(message, Color.green, successSFX);
+    public void ErrorFeedback(string message) => SetFeedbackText(message, Color.red, errorSFX);
+    public void EndGameFeedback(string message) => SetFeedbackText(message, Color.red, endGameSFX);
+
+    private void SetFeedbackText(string message, Color color, AudioClip audioClip)
     {
         feedbackText.transform.gameObject.SetActive(true);
         feedbackText.text = message;
@@ -26,17 +34,34 @@ public class InGameStatsUI : MonoBehaviour
 
     public void UpdateScore(int score)
     {
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = $"Score: {score}";
     }
 
     public void ShowTimeLeft(float timeLeft)
     {
-        timeLeftText.text = "Time Left: " + ((int)timeLeft / 60).ToString() + "." + ((int)timeLeft % 60).ToString();
+        timeLeftText.text = $"Time Left: {(int)timeLeft / 60}:{(int)timeLeft % 60}";
     }
 
     private void ClearMessage()
     {
         feedbackText.text = "";
         feedbackText.transform.gameObject.SetActive(false);
+    }
+
+    public void SetOpenedWindowPanel()
+    {
+        if (!isEnteredApartment)
+        {
+            apartmentButton.gameObject.SetActive(true);
+            feedbackText.text = "$Enter apartment and steal stuff";
+        }
+        apartmentButton.gameObject.SetActive(true);
+        feedbackText.text = "$Exit apartment?";
+    }
+
+    public void ResetOpenedWindowPanel()
+    {
+        apartmentButton.gameObject.SetActive(false);
+        ClearMessage();
     }
 }

@@ -12,7 +12,7 @@ public class CleaningTool : MonoBehaviour
     private Coroutine currentCoroutine;
     private Coroutine resetCoroutine;
 
-    [Header("Brush Settings")]
+    [Space, Header("Brush Settings")]
     [SerializeField] private Texture2D brush;
     private int brushHalfWidth;
     private int brushHalfHeight;
@@ -20,10 +20,10 @@ public class CleaningTool : MonoBehaviour
     [Header("Convertion Settings")]
     [SerializeField] private float rayLength;
     [SerializeField] private float cleaningCooldown = 0.05f;
-    [SerializeField] private float convertedTreshhold = 98f;
+    [SerializeField] private float convertedThreshhold = 98f;
     public bool IsContinuous;
 
-    [Header("Tool Positioning Setings")]
+    [Header("Tool Positioning Settings")]
     [SerializeField] private Transform originalToolTransform;
     [SerializeField] private float resetDuration;
     [SerializeField] private AnimationCurve easingCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
@@ -50,9 +50,9 @@ public class CleaningTool : MonoBehaviour
 
     #endregion
 
-    #region - Texture Convertion -
+    #region - Cleaning -
 
-    public void StartConvert()
+    public void StartCleaning()
     {
         if (!isCleaningActive)
         {
@@ -62,7 +62,7 @@ public class CleaningTool : MonoBehaviour
                 currentCoroutine = StartCoroutine(ContinuousCleaning());
                 return;
             }
-            Convert();
+            Clean();
             isCleaningActive = false;
         }
     }
@@ -71,12 +71,12 @@ public class CleaningTool : MonoBehaviour
     {
         while (isCleaningActive)
         {
-            Convert();
+            Clean();
             yield return new WaitForSeconds(cleaningCooldown);
         }
     }
 
-    public void StopConvert()
+    public void StopCleaning()
     {
         if (isCleaningActive && currentCoroutine != null)
         {
@@ -105,7 +105,7 @@ public class CleaningTool : MonoBehaviour
         }
     }
 
-    private void Convert()
+    private void Clean()
     {
         if (!Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, rayLength))
         {
@@ -125,7 +125,7 @@ public class CleaningTool : MonoBehaviour
 
         if (!windowState.CanUseTool(this))
         {
-            inGameStatsUI.SetFeedbackText("Can't use this tool right now!", Color.red, inGameStatsUI.ErrorSFX);
+            inGameStatsUI.ErrorFeedback("Can't use this tool right now!");
             return;
         }
 
@@ -174,16 +174,16 @@ public class CleaningTool : MonoBehaviour
             mask.Apply();
         }
 
-        if (convertedPercentage >= convertedTreshhold)
+        if (convertedPercentage >= convertedThreshhold)
         {
             windowStateMachine.ChangeState(windowState.NextState);
             windowState.ChangeMaterial();
             if (windowState.NextState == null)
             {
-                inGameStatsUI.SetFeedbackText("Window fully cleared!", Color.green, inGameStatsUI.SuccessSFX);
+                inGameStatsUI.SuccessFeedback("Window fully cleared!");
                 return;
             }
-            inGameStatsUI.SetFeedbackText("Fully applied!", Color.green, inGameStatsUI.SuccessSFX);
+            inGameStatsUI.SuccessFeedback("Fully applied!");
         }
     }
 

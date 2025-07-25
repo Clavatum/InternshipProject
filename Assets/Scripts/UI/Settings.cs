@@ -28,17 +28,12 @@ public class Settings : MonoBehaviour
 
     #region - UI Events -
 
-    public void IsSettingsPanelActive()
+    public void ToggleSettingsPanel()
     {
         isSettingsPanelActive = !isSettingsPanelActive;
-    }
-
-    public void SetSettingsPanelActiveness()
-    {
         settingsPanel.SetActive(isSettingsPanelActive);
         SaveSettings.SetSFXVolume(SFXVolumeValue);
         SaveSettings.SetMusicVolume(musicVolumeValue);
-        SaveSettings.Save();
     }
 
     public void ChangeMusicVolume(bool isIncreasing)
@@ -55,14 +50,14 @@ public class Settings : MonoBehaviour
 
     private void ChangeVolumeValueText()
     {
-        SetBoundries();
+        SetBoundaries();
         musicVolumeValueText.text = musicVolumeValue.ToString();
         SFXVolumeValueText.text = SFXVolumeValue.ToString();
     }
 
     #endregion
 
-    private void SetBoundries()
+    private void SetBoundaries()
     {
         if (SFXVolumeValue <= 0) { SFXVolumeValue = 0; }
         if (SFXVolumeValue >= 100f) { SFXVolumeValue = 100f; }

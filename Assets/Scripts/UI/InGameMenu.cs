@@ -6,13 +6,9 @@ public class InGameMenu : MonoBehaviour
 
     private bool isMenuPanelActive = false;
 
-    public void IsMenuPanelActive()
+    public void ToggleMenuPanel()
     {
         isMenuPanelActive = !isMenuPanelActive;
-    }
-
-    public void SetMenuPanelActiveness()
-    {
         menuPanel.SetActive(isMenuPanelActive);
     }
 }

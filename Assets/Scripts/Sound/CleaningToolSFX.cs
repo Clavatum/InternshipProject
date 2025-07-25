@@ -6,8 +6,8 @@ public class CleaningToolSFX : MonoBehaviour
     private CleaningTool cleaningTool;
 
     [Header("Audio Settings")]
-    public AudioSource audioSource;
-    public AudioClip audioClip;
+    private AudioSource audioSource;
+    private AudioClip audioClip;
 
     void Awake()
     {

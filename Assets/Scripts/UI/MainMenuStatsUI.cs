@@ -19,8 +19,8 @@ public class MainMenuStatsUI : MonoBehaviour
 
     void Start()
     {
-        totalPlayedTimeText.text = "Total Played Time: " + (gameStatsManager.GetTotalPlayedTime() / 60 + ":" + gameStatsManager.GetTotalPlayedTime() % 60).ToString();
-        scoreText.text = "Total Gold: " + gameStatsManager.GetScore().ToString();
+        totalPlayedTimeText.text = $"Total Played Time: {gameStatsManager.GetTotalPlayedTime() / 60}:{gameStatsManager.GetTotalPlayedTime() % 60}";
+        scoreText.text = $"Total Gold:{gameStatsManager.GetScore()}";
     }
 
     #endregion

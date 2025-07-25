@@ -8,7 +8,7 @@ public class WindowState : MonoBehaviour
     private InGameStatsUI inGameStatsUI;
 
     [Header("Object References")]
-    public Material MaterialToWorkOn;
+    [SerializeField] private Material MaterialToWorkOn;
     public Material CopyOfMaterialToWorkOn { get; private set; } = null;
     private MeshRenderer meshRenderer;
 
@@ -49,8 +49,8 @@ public class WindowState : MonoBehaviour
     public void ChangeMaterial()
     {
         meshRenderer.material = NextState.CopyOfMaterialToWorkOn;
-        gameStatsManager.totalCleanedWindow++;
-        inGameStatsUI.UpdateScore(gameStatsManager.totalCleanedWindow * gameStatsManager.prizeForEachCleanedWindow);
+        gameStatsManager.totalCleanedState++;
+        inGameStatsUI.UpdateScore(gameStatsManager.totalCleanedState * gameStatsManager.prizeForEachCleanedState);
     }
 
     public float CalculateConvertedPercentage()

@@ -6,26 +6,26 @@ public class GameStatsManager : MonoBehaviour
     public GameManager gameEndState;
 
     [Header("Stats")]
-    public int totalDirtyWindow;
-    public int totalCleanedWindow;
-    public int score = 0;
-    public int prizeForEachCleanedWindow = 100;
-    public int prizeForTimeLeft = 10;
-    public float totalPlayedTime;
+    [HideInInspector] public int totalDirtyWindow;
+    [HideInInspector] public int totalCleanedState;
+    [HideInInspector] public float totalPlayedTime;
+    [SerializeField] private int prizeForTimeLeft = 10;
+    private int score = 0;
+    public int prizeForEachCleanedState { get; private set; } = 100;
 
     #region - Getter/Setter -
 
     public void SetScore()
     {
         PlayerPrefs.SetInt("Score", score);
-        Save();
+        PlayerPrefs.Save();
     }
     public int GetScore() => PlayerPrefs.GetInt("Score", 0);
 
     public void SetTotalPlayedTime()
     {
         PlayerPrefs.SetFloat("TotalPlayedTime", totalPlayedTime);
-        Save();
+        PlayerPrefs.Save();
     }
 
     public float GetTotalPlayedTime() => PlayerPrefs.GetFloat("TotalPlayedTime", 0);
@@ -34,8 +34,12 @@ public class GameStatsManager : MonoBehaviour
 
     public void CalculateScore()
     {
-        score = totalCleanedWindow * prizeForEachCleanedWindow + (int)(gameEndState.StartTimer() * prizeForTimeLeft);
+        score = totalCleanedState * prizeForEachCleanedState + (int)(gameEndState.TimeLeft * prizeForTimeLeft);
     }
 
-    public void Save() => PlayerPrefs.Save();
+    public void UpdateScore(int value)
+    {
+        score += value;
+        SetScore();
+    }
 }
