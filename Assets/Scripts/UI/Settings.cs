@@ -3,12 +3,15 @@ using UnityEngine;
 
 public class Settings : MonoBehaviour
 {
+    private Heist heist;
+
     [Header("Object References")]
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private TextMeshProUGUI musicVolumeValueText;
     [SerializeField] private TextMeshProUGUI SFXVolumeValueText;
     [SerializeField] private AudioSource musicAudioSource;
     [SerializeField] private AudioSource SFXAudioSource;
+    public AudioClip windAudioClip;
 
     [Header("Sound Settings")]
     private float musicVolumeValue;
@@ -16,6 +19,11 @@ public class Settings : MonoBehaviour
     private int volumeChangeAmount = 10;
 
     private bool isSettingsPanelActive = false;
+
+    void Awake()
+    {
+        heist = FindAnyObjectByType<Heist>();
+    }
 
     void Start()
     {
@@ -69,5 +77,20 @@ public class Settings : MonoBehaviour
     {
         audioSource.volume = volume / 10;
         ChangeVolumeValueText();
+    }
+
+    public void ChangeMusic(AudioClip audioClip)
+    {
+        musicAudioSource.clip = audioClip;
+    }
+
+    void OnEnable()
+    {
+        Heist.SetMusicOnHeistStarted += ChangeMusic;
+    }
+
+    void OnDisable()
+    {
+        Heist.RemoveMusicOnHeistFinished -= ChangeMusic;
     }
 }

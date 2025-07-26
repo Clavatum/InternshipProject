@@ -18,14 +18,13 @@ public class GameStatsManager : MonoBehaviour
     public void SetScore()
     {
         PlayerPrefs.SetInt("Score", score);
-        PlayerPrefs.Save();
     }
+
     public int GetScore() => PlayerPrefs.GetInt("Score", 0);
 
     public void SetTotalPlayedTime()
     {
         PlayerPrefs.SetFloat("TotalPlayedTime", totalPlayedTime);
-        PlayerPrefs.Save();
     }
 
     public float GetTotalPlayedTime() => PlayerPrefs.GetFloat("TotalPlayedTime", 0);
@@ -34,7 +33,7 @@ public class GameStatsManager : MonoBehaviour
 
     public void CalculateScore()
     {
-        score = totalCleanedState * prizeForEachCleanedState + (int)(gameEndState.TimeLeft * prizeForTimeLeft);
+        score = totalCleanedState * prizeForEachCleanedState + (int)(gameEndState.TotalTimeLeft * prizeForTimeLeft);
     }
 
     public void UpdateScore(int value)

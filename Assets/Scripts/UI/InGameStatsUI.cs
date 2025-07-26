@@ -1,22 +1,38 @@
 using TMPro;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class InGameStatsUI : MonoBehaviour
 {
+    private GameManager gameManager;
+    private Heist heist;
+    private OpenedWindowTrigger currentOpenedWindow;
+    private Teleport teleport;
+    private XRSimpleInteractable apartmentButtonInteractable;
+
     [Header("Object References")]
     [SerializeField] private TextMeshProUGUI feedbackText;
     [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private TextMeshProUGUI timeLeftText;
+    public TextMeshProUGUI totalTimeLeftText;
+    public TextMeshProUGUI heistTimeLeftText;
     [SerializeField] private AudioSource SFXAudioSource;
-    private AudioClip errorSFX;
-    private AudioClip successSFX;
-    private AudioClip endGameSFX;
-    private Button apartmentButton;
+    [SerializeField] private AudioClip errorSFX;
+    [SerializeField] private AudioClip successSFX;
+    [SerializeField] private AudioClip endGameSFX;
+    [SerializeField] private GameObject apartmentButton;
 
     [SerializeField] private float messageDuration = 2f;
 
     public bool isEnteredApartment;
+
+    void Awake()
+    {
+        gameManager = FindAnyObjectByType<GameManager>();
+        teleport = FindAnyObjectByType<Teleport>();
+        heist = FindAnyObjectByType<Heist>();
+    }
 
     public void SuccessFeedback(string message) => SetFeedbackText(message, Color.green, successSFX);
     public void ErrorFeedback(string message) => SetFeedbackText(message, Color.red, errorSFX);
@@ -32,12 +48,12 @@ public class InGameStatsUI : MonoBehaviour
         Invoke(nameof(ClearMessage), messageDuration);
     }
 
-    public void UpdateScore(int score)
+    public void UpdateScoreText(int score)
     {
         scoreText.text = $"Score: {score}";
     }
 
-    public void ShowTimeLeft(float timeLeft)
+    public void ShowTimeLeft(TextMeshProUGUI timeLeftText, float timeLeft)
     {
         timeLeftText.text = $"Time Left: {(int)timeLeft / 60}:{(int)timeLeft % 60}";
     }
@@ -48,20 +64,37 @@ public class InGameStatsUI : MonoBehaviour
         feedbackText.transform.gameObject.SetActive(false);
     }
 
-    public void SetOpenedWindowPanel()
+    private void SetOpenedWindowPanel(OpenedWindowTrigger openedWindowTrigger)
     {
-        if (!isEnteredApartment)
+        currentOpenedWindow = openedWindowTrigger;
+        apartmentButtonInteractable = apartmentButton.GetComponent<XRSimpleInteractable>();
+        float totalTime = gameManager.TotalTimeLeft < heist.totalHeistTime ? gameManager.TotalTimeLeft : heist.totalHeistTime;
+        feedbackText.text = openedWindowTrigger.IsInside ? $"Get out of the apartment" : $"Do you want to enter apartment and steal stuff?\n You have {totalTime} seconds";
+        apartmentButtonInteractable.selectEntered.RemoveAllListeners();
+
+        if (!openedWindowTrigger.IsInside)
         {
-            apartmentButton.gameObject.SetActive(true);
-            feedbackText.text = "$Enter apartment and steal stuff";
+            apartmentButtonInteractable.selectEntered.AddListener(zort => teleport.TeleportTo(currentOpenedWindow));
         }
-        apartmentButton.gameObject.SetActive(true);
-        feedbackText.text = "$Exit apartment?";
+
+        apartmentButton.SetActive(true);
     }
 
     public void ResetOpenedWindowPanel()
     {
-        apartmentButton.gameObject.SetActive(false);
+        apartmentButton.SetActive(false);
         ClearMessage();
+    }
+
+    void OnEnable()
+    {
+        OpenedWindowTrigger.OnWindowEnter += SetOpenedWindowPanel;
+        OpenedWindowTrigger.OnWindowExit += ResetOpenedWindowPanel;
+    }
+
+    void OnDisable()
+    {
+        OpenedWindowTrigger.OnWindowEnter -= SetOpenedWindowPanel;
+        OpenedWindowTrigger.OnWindowExit -= ResetOpenedWindowPanel;
     }
 }

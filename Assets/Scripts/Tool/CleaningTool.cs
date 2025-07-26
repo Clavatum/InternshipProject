@@ -19,7 +19,6 @@ public class CleaningTool : MonoBehaviour
 
     [Header("Convertion Settings")]
     [SerializeField] private float rayLength;
-    [SerializeField] private float cleaningCooldown = 0.05f;
     [SerializeField] private float convertedThreshhold = 98f;
     public bool IsContinuous;
 
@@ -72,7 +71,7 @@ public class CleaningTool : MonoBehaviour
         while (isCleaningActive)
         {
             Clean();
-            yield return new WaitForSeconds(cleaningCooldown);
+            yield return null;
         }
     }
 
