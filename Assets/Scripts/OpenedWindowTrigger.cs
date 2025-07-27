@@ -8,21 +8,23 @@ public class OpenedWindowTrigger : MonoBehaviour
     public static event Action OnWindowExit;
 
     [SerializeField] private Transform teleportTarget;
-    [SerializeField] private bool isInside = false;
+    public bool isInside = false;
 
-    public bool IsInside => isInside;
     public Transform TeleportTarget => teleportTarget;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<XROrigin>() != null)
         {
-            if (!IsInside)
+            if (!isInside)
             {
                 OnWindowEnter?.Invoke(this);
-                return;
             }
-            OnWindowExit?.Invoke();
         }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        OnWindowExit?.Invoke();
     }
 }
