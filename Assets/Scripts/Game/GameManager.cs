@@ -14,7 +14,9 @@ public class GameManager : MonoBehaviour
 
     public float TotalTimeLeft { get; private set; } = 0f;
     public float TotalHeistTimeLeft { get; private set; } = 0f;
-    private bool IsGameEnded => heist.totalHeistTime <= 0f || TotalTimeLeft <= 0f || gameStatsManager.totalCleanedState / 4 == gameStatsManager.totalDirtyWindow;
+    private bool IsGameOver => TotalHeistTimeLeft <= 0f || TotalTimeLeft <= 0f;
+    private bool IsGameWin => gameStatsManager.totalCleanedState / 4 == gameStatsManager.totalDirtyWindow;
+    private bool isGameEndScreenShown = false;
 
     #region - Awake/Start/Update -
 
@@ -34,11 +36,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (isGameEndScreenShown) { return; }
         StartTotalTimer();
         StartHeistTimer();
 
-        if (IsGameEnded)
+        if (IsGameOver || IsGameWin)
         {
+            isGameEndScreenShown = true;
             gameStatsManager.CalculateScore();
             StartCoroutine(EndGame());
             gameStatsManager.totalPlayedTime += TotalTimeLeft;
@@ -55,7 +59,7 @@ public class GameManager : MonoBehaviour
         if (heist.IsHeistStarted)
         {
             inGameStatsUI.ShowTimeLeft(inGameStatsUI.heistTimeLeftText, TotalHeistTimeLeft);
-            heist.totalHeistTime -= Time.deltaTime;
+            TotalHeistTimeLeft -= Time.deltaTime;
         }
 
     }
@@ -69,7 +73,17 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator EndGame()
     {
-        inGameStatsUI.EndGameFeedback("Game Finished!");
+
+        if (IsGameOver)
+        {
+            inGameStatsUI.GameOverFeedback("Game Over!");
+        }
+
+        if (IsGameWin)
+        {
+            inGameStatsUI.GameWonFeedback("You Win!");
+        }
+
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(3f);
         sceneController.SetScene(0);

@@ -6,17 +6,17 @@ public class Teleport : MonoBehaviour
 
     public void TeleportTo(OpenedWindowTrigger openedWindowTrigger)
     {
+        CharacterController characterController = GetComponent<CharacterController>();
+        characterController.enabled = false;
         if (!openedWindowTrigger.isInside)
         {
-            gameObject.transform.localPosition = openedWindowTrigger.TeleportTarget.localPosition;
-            gameObject.transform.localRotation = openedWindowTrigger.TeleportTarget.localRotation;
+            gameObject.transform.position = openedWindowTrigger.TeleportTarget.position;
+            characterController.enabled = true;
             openedWindowTrigger.isInside = true;
-            Debug.Log("teleported apartment");
             return;
         }
-        gameObject.transform.localPosition = playerTransformInElevator.transform.localPosition;
-        gameObject.transform.localRotation = playerTransformInElevator.transform.localRotation;
+        gameObject.transform.position = playerTransformInElevator.transform.position;
+        characterController.enabled = true;
         openedWindowTrigger.isInside = false;
-        Debug.Log("teleported elevator");
     }
 }

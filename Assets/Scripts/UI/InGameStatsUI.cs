@@ -21,6 +21,7 @@ public class InGameStatsUI : MonoBehaviour
     [SerializeField] private AudioClip errorSFX;
     [SerializeField] private AudioClip successSFX;
     [SerializeField] private AudioClip endGameSFX;
+    [SerializeField] private AudioClip gameWonSFX;
     [SerializeField] private GameObject apartmentButton;
 
     [SerializeField] private float messageDuration = 2f;
@@ -36,7 +37,8 @@ public class InGameStatsUI : MonoBehaviour
 
     public void SuccessFeedback(string message) => SetFeedbackText(message, Color.green, successSFX);
     public void ErrorFeedback(string message) => SetFeedbackText(message, Color.red, errorSFX);
-    public void EndGameFeedback(string message) => SetFeedbackText(message, Color.red, endGameSFX);
+    public void GameOverFeedback(string message) => SetFeedbackText(message, Color.red, endGameSFX);
+    public void GameWonFeedback(string message) => SetFeedbackText(message, Color.green, gameWonSFX);
 
     private void SetFeedbackText(string message, Color color, AudioClip audioClip)
     {
@@ -70,10 +72,10 @@ public class InGameStatsUI : MonoBehaviour
         apartmentButtonInteractable = apartmentButton.GetComponent<XRSimpleInteractable>();
         float totalTime = gameManager.TotalTimeLeft < heist.totalHeistTime ? gameManager.TotalTimeLeft : heist.totalHeistTime;
         feedbackText.text = openedWindowTrigger.isInside ? $"Get out of the apartment" : $"Do you want to enter apartment and steal stuff?\n You have {totalTime} seconds";
-        teleport.TeleportTo(currentOpenedWindow);
-        //apartmentButtonInteractable.selectEntered.RemoveAllListeners();
 
-        //apartmentButtonInteractable.selectEntered.AddListener(zort => teleport.TeleportTo(currentOpenedWindow));
+        apartmentButtonInteractable.selectEntered.RemoveAllListeners();
+        apartmentButtonInteractable.selectEntered.AddListener(zort => teleport.TeleportTo(currentOpenedWindow));
+        apartmentButtonInteractable.selectEntered.AddListener(zort => heist.SetHeist());
 
         feedbackText.gameObject.SetActive(true);
         apartmentButton.SetActive(true);

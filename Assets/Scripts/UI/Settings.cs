@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class Settings : MonoBehaviour
 {
-    private Heist heist;
-
     [Header("Object References")]
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private TextMeshProUGUI musicVolumeValueText;
@@ -19,11 +17,6 @@ public class Settings : MonoBehaviour
     private int volumeChangeAmount = 10;
 
     private bool isSettingsPanelActive = false;
-
-    void Awake()
-    {
-        heist = FindAnyObjectByType<Heist>();
-    }
 
     void Start()
     {
@@ -81,7 +74,9 @@ public class Settings : MonoBehaviour
 
     public void ChangeMusic(AudioClip audioClip)
     {
+        musicAudioSource.Stop();
         musicAudioSource.clip = audioClip;
+        musicAudioSource.Play();
     }
 
     void OnEnable()
