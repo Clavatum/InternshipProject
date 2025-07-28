@@ -32,6 +32,15 @@ public class Elevator : MonoBehaviour
         }
     }
 
+    void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<CleaningTool>() != null)
+        {
+            CleaningTool cleaningTool = other.GetComponent<CleaningTool>();
+            cleaningTool.ResetTransformSmoothly();
+        }
+    }
+
     #region - Audio -
 
     public void PlayStartClip()

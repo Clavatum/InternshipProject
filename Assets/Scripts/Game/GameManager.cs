@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -39,9 +40,7 @@ public class GameManager : MonoBehaviour
         if (IsGameEnded)
         {
             gameStatsManager.CalculateScore();
-            inGameStatsUI.EndGameFeedback("Game Finished!");
-            Time.timeScale = 0;
-            sceneController.SetScene(0);
+            StartCoroutine(EndGame());
             gameStatsManager.totalPlayedTime += TotalTimeLeft;
             TotalTimeLeft = 0f;
             TotalHeistTimeLeft = 0f;
@@ -66,6 +65,14 @@ public class GameManager : MonoBehaviour
         inGameStatsUI.ShowTimeLeft(inGameStatsUI.totalTimeLeftText, TotalTimeLeft);
 
         TotalTimeLeft -= Time.deltaTime;
+    }
+
+    private IEnumerator EndGame()
+    {
+        inGameStatsUI.EndGameFeedback("Game Finished!");
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(3f);
+        sceneController.SetScene(0);
     }
 
     void OnEnable()

@@ -70,9 +70,10 @@ public class InGameStatsUI : MonoBehaviour
         apartmentButtonInteractable = apartmentButton.GetComponent<XRSimpleInteractable>();
         float totalTime = gameManager.TotalTimeLeft < heist.totalHeistTime ? gameManager.TotalTimeLeft : heist.totalHeistTime;
         feedbackText.text = openedWindowTrigger.isInside ? $"Get out of the apartment" : $"Do you want to enter apartment and steal stuff?\n You have {totalTime} seconds";
-        apartmentButtonInteractable.selectEntered.RemoveAllListeners();
+        teleport.TeleportTo(currentOpenedWindow);
+        //apartmentButtonInteractable.selectEntered.RemoveAllListeners();
 
-        apartmentButtonInteractable.selectEntered.AddListener(zort => teleport.TeleportTo(currentOpenedWindow));
+        //apartmentButtonInteractable.selectEntered.AddListener(zort => teleport.TeleportTo(currentOpenedWindow));
 
         feedbackText.gameObject.SetActive(true);
         apartmentButton.SetActive(true);
