@@ -57,7 +57,7 @@ public class InGameStatsUI : MonoBehaviour
 
     public void ShowTimeLeft(TextMeshProUGUI timeLeftText, float timeLeft)
     {
-        timeLeftText.text = $"Time Left: {(int)timeLeft / 60}:{(int)timeLeft % 60}";
+        timeLeftText.text = $"Time Left: {(int)(timeLeft / 60):D2}:{(int)(timeLeft % 60):D2}";
     }
 
     private void ClearMessage()

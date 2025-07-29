@@ -18,8 +18,8 @@ public class MainMenuStatsUI : MonoBehaviour
 
     private void UpdateStatText()
     {
-        totalPlayedTimeText.text = $"Total Played Time: {(int)(gameStatsManager.GetTotalPlayedTime() / 60)}:{(int)(gameStatsManager.GetTotalPlayedTime() % 60)}";
+        float totalTime = gameStatsManager.GetTotalPlayedTime();
+        totalPlayedTimeText.text = $"Total Played Time: {(int)(totalTime / 60):D2}:{(int)(totalTime % 60):D2}";
         scoreText.text = $"Total Gold: {gameStatsManager.GetTotalScore()}";
-        Debug.Log("stat text updated");
     }
 }
