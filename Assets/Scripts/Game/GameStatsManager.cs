@@ -10,7 +10,7 @@ public class GameStatsManager : MonoBehaviour
     [HideInInspector] public int totalCleanedState;
     [HideInInspector] public float totalPlayedTime;
     [SerializeField] private int prizeForTimeLeft = 10;
-    private int score = 0;
+    private int score;
     public int prizeForEachCleanedState { get; private set; } = 100;
 
     #region - Getter/Setter -

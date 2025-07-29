@@ -8,19 +8,19 @@ public class Pocket : MonoBehaviour
     void Awake()
     {
         inGameStatsUI = FindAnyObjectByType<InGameStatsUI>();
-        stealable = FindAnyObjectByType<Stealable>();
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Stealable>() != null)
         {
+            stealable = other.gameObject.GetComponent<Stealable>();
             if (stealable.IsSpeedLimitExceeded())
             {
                 inGameStatsUI.ErrorFeedback("Can't steal more!");
                 return;
             }
-            Destroy(other);
+            Destroy(other.gameObject);
             inGameStatsUI.SuccessFeedback($"+${stealable.value}");
         }
     }

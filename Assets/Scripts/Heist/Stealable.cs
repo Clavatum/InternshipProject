@@ -5,6 +5,7 @@ public class Stealable : MonoBehaviour
 {
     [Header("Class References")]
     private GameStatsManager gameStatsManager;
+    InGameStatsUI inGameStatsUI;
     private DynamicMoveProvider dynamicMoveProvider;
 
     [Header("Features")]
@@ -17,6 +18,7 @@ public class Stealable : MonoBehaviour
 
     void Awake()
     {
+        inGameStatsUI = FindAnyObjectByType<InGameStatsUI>();
         dynamicMoveProvider = FindAnyObjectByType<DynamicMoveProvider>();
         gameStatsManager = FindAnyObjectByType<GameStatsManager>();
         originalSpeed = dynamicMoveProvider.moveSpeed;
@@ -45,6 +47,7 @@ public class Stealable : MonoBehaviour
         if (!IsSpeedLimitExceeded())
         {
             gameStatsManager.UpdateScore(value);
+            inGameStatsUI.UpdateScoreText(gameStatsManager.GetScore());
             if (!isSlowApplied) { ApplySlow(); }
         }
     }
