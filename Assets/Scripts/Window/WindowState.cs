@@ -50,7 +50,7 @@ public class WindowState : MonoBehaviour
     {
         meshRenderer.material = NextState.CopyOfMaterialToWorkOn;
         gameStatsManager.totalCleanedState++;
-        inGameStatsUI.UpdateScoreText(gameStatsManager.totalCleanedState * gameStatsManager.prizeForEachCleanedState);
+        inGameStatsUI.UpdateScoreText(gameStatsManager.totalCleanedState * gameStatsManager.PrizeForEachCleanedState);
     }
 
     public float CalculateConvertedPercentage()

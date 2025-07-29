@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuStatsUI : MonoBehaviour
 {
@@ -14,13 +15,24 @@ public class MainMenuStatsUI : MonoBehaviour
 
     void Awake()
     {
-        gameStatsManager = FindAnyObjectByType<GameStatsManager>();
+        /*PlayerPrefs.SetInt("Score", 0);
+        PlayerPrefs.SetFloat("TotalPlayedTime", 0f);
+        PlayerPrefs.Save();*/
+        //gameStatsManager = FindAnyObjectByType<GameStatsManager>();
+        UpdateStatText();
     }
 
     void Start()
     {
-        totalPlayedTimeText.text = $"Total Played Time: {gameStatsManager.GetTotalPlayedTime() / 60}:{gameStatsManager.GetTotalPlayedTime() % 60}";
-        scoreText.text = $"Total Gold:{gameStatsManager.GetScore()}";
+        //UpdateStatText();
+
+    }
+
+    private void UpdateStatText()
+    {
+        totalPlayedTimeText.text = $"Total Played Time: {(int)(GameStatsManager.Instance.GetTotalPlayedTime() / 60)}:{(int)(GameStatsManager.Instance.GetTotalPlayedTime() % 60)}";
+        scoreText.text = $"Total Gold: {GameStatsManager.Instance.GetScore()}";
+        Debug.Log("stat text updated");
     }
 
     #endregion

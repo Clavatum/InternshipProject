@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
 
     [Space, SerializeField] private float totalTime;
 
-    public float TotalTimeLeft { get; private set; } = 0f;
-    public float TotalHeistTimeLeft { get; private set; } = 0f;
+    public float TotalTimeLeft { get; private set; }
+    public float TotalHeistTimeLeft { get; private set; }
     private bool IsGameOver => TotalHeistTimeLeft <= 0f || TotalTimeLeft <= 0f;
     private bool IsGameWin => gameStatsManager.totalCleanedState / 4 == gameStatsManager.totalDirtyWindow;
     private bool isGameEndScreenShown = false;
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
             isGameEndScreenShown = true;
             gameStatsManager.CalculateScore();
             StartCoroutine(EndGame());
-            gameStatsManager.totalPlayedTime += TotalTimeLeft;
+            gameStatsManager.totalPlayedTime += totalTime - TotalTimeLeft;
             TotalTimeLeft = 0f;
             TotalHeistTimeLeft = 0f;
             gameStatsManager.SetTotalPlayedTime();
