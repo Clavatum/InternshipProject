@@ -43,13 +43,14 @@ public class GameManager : MonoBehaviour
         if (IsGameOver || IsGameWin)
         {
             isGameEndScreenShown = true;
-            gameStatsManager.CalculateScore();
+            gameStatsManager.CalculateCurrentScore();
             StartCoroutine(EndGame());
             gameStatsManager.totalPlayedTime += totalTime - TotalTimeLeft;
             TotalTimeLeft = 0f;
             TotalHeistTimeLeft = 0f;
             gameStatsManager.SetTotalPlayedTime();
-            gameStatsManager.SetScore();
+            gameStatsManager.UpdateTotalScore();
+            gameStatsManager.currentScore = 0;
             PlayerPrefs.Save();
         }
     }

@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenuStatsUI : MonoBehaviour
 {
@@ -11,29 +10,16 @@ public class MainMenuStatsUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI totalPlayedTimeText;
     [SerializeField] private TextMeshProUGUI scoreText;
 
-    #region - Awake/Start -
-
     void Awake()
     {
-        /*PlayerPrefs.SetInt("Score", 0);
-        PlayerPrefs.SetFloat("TotalPlayedTime", 0f);
-        PlayerPrefs.Save();*/
-        //gameStatsManager = FindAnyObjectByType<GameStatsManager>();
+        gameStatsManager = FindAnyObjectByType<GameStatsManager>();
         UpdateStatText();
-    }
-
-    void Start()
-    {
-        //UpdateStatText();
-
     }
 
     private void UpdateStatText()
     {
-        totalPlayedTimeText.text = $"Total Played Time: {(int)(GameStatsManager.Instance.GetTotalPlayedTime() / 60)}:{(int)(GameStatsManager.Instance.GetTotalPlayedTime() % 60)}";
-        scoreText.text = $"Total Gold: {GameStatsManager.Instance.GetScore()}";
+        totalPlayedTimeText.text = $"Total Played Time: {(int)(gameStatsManager.GetTotalPlayedTime() / 60)}:{(int)(gameStatsManager.GetTotalPlayedTime() % 60)}";
+        scoreText.text = $"Total Gold: {gameStatsManager.GetTotalScore()}";
         Debug.Log("stat text updated");
     }
-
-    #endregion
 }

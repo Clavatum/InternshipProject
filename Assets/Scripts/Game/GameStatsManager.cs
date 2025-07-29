@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class GameStatsManager : MonoBehaviour
 {
-    public static GameStatsManager Instance;
     [Header("Class References")]
     public GameManager gameEndState;
 
@@ -12,28 +11,24 @@ public class GameStatsManager : MonoBehaviour
     [HideInInspector] public int totalCleanedState;
     [HideInInspector] public float totalPlayedTime;
     [SerializeField] private int prizeForTimeLeft = 10;
-    private int score;
+    private int totalScore;
+    public int currentScore = 0;
     public int PrizeForEachCleanedState { get; private set; } = 100;
 
     #region - Getter/Setter -
-    void Awake()
+
+    void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-    public void SetScore()
-    {
-        PlayerPrefs.SetInt("Score", score);
+        totalScore = GetTotalScore();
+        totalPlayedTime = GetTotalPlayedTime();
     }
 
-    public int GetScore() => PlayerPrefs.GetInt("Score");
+    public void SetTotalScore()
+    {
+        PlayerPrefs.SetInt("TotalScore", totalScore);
+    }
+
+    public int GetTotalScore() => PlayerPrefs.GetInt("TotalScore");
 
     public void SetTotalPlayedTime()
     {
@@ -44,15 +39,19 @@ public class GameStatsManager : MonoBehaviour
 
     #endregion
 
-    public void CalculateScore()
+    public void CalculateCurrentScore()
     {
-        score += totalCleanedState * PrizeForEachCleanedState + (int)(gameEndState.TotalTimeLeft * prizeForTimeLeft);
-        Debug.Log(score);
+        currentScore += totalCleanedState * PrizeForEachCleanedState + (int)(gameEndState.TotalTimeLeft * prizeForTimeLeft);
     }
 
-    public void UpdateScore(int value)
+    public void UpdateCurrentScore(int value)
     {
-        score += value;
-        SetScore();
+        currentScore += value;
+    }
+
+    public void UpdateTotalScore()
+    {
+        totalScore += currentScore;
+        SetTotalScore();
     }
 }
