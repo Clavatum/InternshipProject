@@ -17,7 +17,7 @@ public class Pocket : MonoBehaviour
         if (other.gameObject.GetComponent<Stealable>() != null)
         {
             stealable = other.gameObject.GetComponent<Stealable>();
-            if (stealable.isHeld) { return; }
+            if (!stealable.isHeld) { return; }
             if (stealable.IsSpeedLimitExceeded())
             {
                 inGameStatsUI.ErrorFeedback("Can't steal more!");
@@ -26,6 +26,7 @@ public class Pocket : MonoBehaviour
             gameStatsManager.UpdateCurrentScore(stealable.value);
             inGameStatsUI.UpdateScoreText(gameStatsManager.currentScore);
             if (!stealable.isSlowApplied) { stealable.ApplySlow(); }
+            stealable.isHeld = false;
             Destroy(other.gameObject);
             inGameStatsUI.SuccessFeedback($"+${stealable.value}");
         }
