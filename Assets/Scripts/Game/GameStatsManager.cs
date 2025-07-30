@@ -4,7 +4,7 @@ using UnityEngine;
 public class GameStatsManager : MonoBehaviour
 {
     [Header("Class References")]
-    public GameManager gameEndState;
+    private GameManager gameManager;
 
     [Header("Stats")]
     [HideInInspector] public int totalDirtyWindow;
@@ -12,16 +12,24 @@ public class GameStatsManager : MonoBehaviour
     [HideInInspector] public float totalPlayedTime;
     [SerializeField] private int prizeForTimeLeft = 10;
     private int totalScore;
-    public int currentScore = 0;
+    [HideInInspector] public int currentScore = 0;
     public int PrizeForEachCleanedState { get; private set; } = 100;
 
-    #region - Getter/Setter -
+
+    void Awake()
+    {
+        gameManager = FindAnyObjectByType<GameManager>();
+    }
 
     void Start()
     {
+        currentScore = 0;
+        totalCleanedState = 0;
         totalScore = GetTotalScore();
         totalPlayedTime = GetTotalPlayedTime();
     }
+
+    #region - Getter/Setter -
 
     public void SetTotalScore()
     {
@@ -37,11 +45,10 @@ public class GameStatsManager : MonoBehaviour
 
     public float GetTotalPlayedTime() => PlayerPrefs.GetFloat("TotalPlayedTime");
 
-    #endregion
 
     public void CalculateCurrentScore()
     {
-        currentScore += totalCleanedState * PrizeForEachCleanedState + (int)(gameEndState.TotalTimeLeft * prizeForTimeLeft);
+        currentScore += gameManager.IsGameOver ? totalCleanedState * PrizeForEachCleanedState : totalCleanedState * PrizeForEachCleanedState + (int)(gameManager.TotalTimeLeft * prizeForTimeLeft);
     }
 
     public void UpdateCurrentScore(int value)
@@ -54,4 +61,6 @@ public class GameStatsManager : MonoBehaviour
         totalScore += currentScore;
         SetTotalScore();
     }
+
+    #endregion
 }

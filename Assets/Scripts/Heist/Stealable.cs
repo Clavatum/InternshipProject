@@ -14,6 +14,9 @@ public class Stealable : MonoBehaviour
 
     [HideInInspector] public bool isSlowApplied = false;
 
+    public bool isHeld = false;
+
+
     void Awake()
     {
         dynamicMoveProvider = FindAnyObjectByType<DynamicMoveProvider>();
@@ -36,5 +39,10 @@ public class Stealable : MonoBehaviour
     public bool IsSpeedLimitExceeded()
     {
         return dynamicMoveProvider.moveSpeed <= minSpeedLimit;
+    }
+
+    public void ToggleHeld()
+    {
+        isHeld = !isHeld;
     }
 }

@@ -16,10 +16,7 @@ public class OpenedWindowTrigger : MonoBehaviour
     {
         if (other.gameObject.GetComponent<XROrigin>() != null)
         {
-            if (!isInside)
-            {
-                OnWindowEnter?.Invoke(this);
-            }
+            OnWindowEnter?.Invoke(this);
         }
     }
 

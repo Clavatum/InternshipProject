@@ -120,7 +120,6 @@ public class CleaningTool : MonoBehaviour
         windowStateMachine = hit.transform.GetComponentInChildren<WindowStateMachine>();
 
         float convertedPercentage = windowState.CalculateConvertedPercentage();
-        Debug.Log("converted percentage: " + convertedPercentage);
 
         if (!windowState.CanUseTool(this))
         {

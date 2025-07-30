@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,11 +12,13 @@ public class GameManager : MonoBehaviour
     private SceneController sceneController;
     private InGameStatsUI inGameStatsUI;
 
+    private Animator gameOverAnimator;
+
     [Space, SerializeField] private float totalTime;
 
     public float TotalTimeLeft { get; private set; }
     public float TotalHeistTimeLeft { get; private set; }
-    private bool IsGameOver => TotalHeistTimeLeft <= 0f || TotalTimeLeft <= 0f;
+    public bool IsGameOver => TotalHeistTimeLeft <= 0f || TotalTimeLeft <= 0f;
     private bool IsGameWin => gameStatsManager.totalCleanedState / 4 == gameStatsManager.totalDirtyWindow;
     private bool isGameEndScreenShown = false;
 
@@ -26,6 +30,7 @@ public class GameManager : MonoBehaviour
         inGameStatsUI = FindAnyObjectByType<InGameStatsUI>();
         gameStatsManager = FindAnyObjectByType<GameStatsManager>();
         sceneController = FindAnyObjectByType<SceneController>();
+        gameOverAnimator = inGameStatsUI.gameOverPanel.GetComponent<Animator>();
     }
 
     void Start()
@@ -44,7 +49,8 @@ public class GameManager : MonoBehaviour
         {
             isGameEndScreenShown = true;
             gameStatsManager.CalculateCurrentScore();
-            StartCoroutine(EndGame());
+            EndGame();
+            StartCoroutine(ReturnMainMenu());
             gameStatsManager.totalPlayedTime += totalTime - TotalTimeLeft;
             TotalTimeLeft = 0f;
             TotalHeistTimeLeft = 0f;
@@ -61,8 +67,10 @@ public class GameManager : MonoBehaviour
         {
             inGameStatsUI.ShowTimeLeft(inGameStatsUI.heistTimeLeftText, TotalHeistTimeLeft);
             TotalHeistTimeLeft -= Time.deltaTime;
+            return;
         }
-
+        inGameStatsUI.heistTimeLeftText.text = "";
+        TotalHeistTimeLeft = heist.totalHeistTime;
     }
 
     private void StartTotalTimer()
@@ -72,12 +80,11 @@ public class GameManager : MonoBehaviour
         TotalTimeLeft -= Time.deltaTime;
     }
 
-    private IEnumerator EndGame()
+    private void EndGame()
     {
-
         if (IsGameOver)
         {
-            inGameStatsUI.GameOverFeedback("Game Over!");
+            inGameStatsUI.GameOverFeedback("Time Is Up Game Over!");
         }
 
         if (IsGameWin)
@@ -85,20 +92,35 @@ public class GameManager : MonoBehaviour
             inGameStatsUI.GameWonFeedback("You Win!");
         }
 
-        Time.timeScale = 0;
+    }
+
+    private IEnumerator ReturnMainMenu()
+    {
+        gameOverAnimator.SetTrigger("isGameOver");
         yield return new WaitForSecondsRealtime(3f);
+        Time.timeScale = 0;
         sceneController.SetScene(0);
     }
 
     void OnEnable()
     {
-        Heist.SetHeistTimerOnHeistStarted += StartHeistTimer;
+        heist.SetHeistTimerOnHeistStarted += StartHeistTimer;
     }
 
     void OnDisable()
     {
-        Heist.SetHeistTimerOnHeistStarted -= StartHeistTimer;
+        heist.SetHeistTimerOnHeistStarted -= StartHeistTimer;
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<XROrigin>() != null)
+        {
+            DynamicMoveProvider dynamicMoveProvider = other.GetComponent<DynamicMoveProvider>();
+            dynamicMoveProvider.moveSpeed = 0f;
+            inGameStatsUI.GameOverFeedback("You died!");
+            StartCoroutine(ReturnMainMenu());
+        }
+    }
     #endregion
 }

@@ -6,8 +6,8 @@ public class CleaningToolSFX : MonoBehaviour
     private CleaningTool cleaningTool;
 
     [Header("Audio Settings")]
-    private AudioSource audioSource;
-    private AudioClip audioClip;
+    [SerializeField] private AudioSource SFXAudioSource;
+    [SerializeField] private AudioClip audioClip;
 
     void Awake()
     {
@@ -18,9 +18,9 @@ public class CleaningToolSFX : MonoBehaviour
     {
         if (cleaningTool.IsContinuous)
         {
-            audioSource.clip = audioClip;
-            audioSource.Play();
+            SFXAudioSource.clip = audioClip;
+            SFXAudioSource.Play();
         }
-        audioSource.PlayOneShot(audioClip);
+        SFXAudioSource.PlayOneShot(audioClip);
     }
 }

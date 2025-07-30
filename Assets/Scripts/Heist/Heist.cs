@@ -3,9 +3,9 @@ using System;
 
 public class Heist : MonoBehaviour
 {
-    public static event Action<AudioClip> SetMusicOnHeistStarted;
-    public static event Action<AudioClip> RemoveMusicOnHeistFinished;
-    public static event Action SetHeistTimerOnHeistStarted;
+    public event Action<AudioClip> SetMusicOnHeistStarted;
+    public event Action<AudioClip> RemoveMusicOnHeistFinished;
+    public event Action SetHeistTimerOnHeistStarted;
 
     private Settings settings;
     private bool isHeistStarted = false;
@@ -20,13 +20,14 @@ public class Heist : MonoBehaviour
 
     public void SetHeist()
     {
+        SetHeistTimerOnHeistStarted?.Invoke();
         if (!isHeistStarted)
         {
-            SetMusicOnHeistStarted?.Invoke(heistAudioClip);
-            SetHeistTimerOnHeistStarted?.Invoke();
             isHeistStarted = true;
+            SetMusicOnHeistStarted?.Invoke(heistAudioClip);
             return;
         }
+        isHeistStarted = false;
         RemoveMusicOnHeistFinished?.Invoke(settings.windAudioClip);
     }
 }

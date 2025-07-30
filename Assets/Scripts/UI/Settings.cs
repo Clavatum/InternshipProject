@@ -1,10 +1,16 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
+    private Heist heist;
+
     [Header("Object References")]
     [SerializeField] private GameObject settingsPanel;
+    public GameObject menuPanel;
+    public GameObject settingsButton;
+    public GameObject menuButton;
     [SerializeField] private TextMeshProUGUI musicVolumeValueText;
     [SerializeField] private TextMeshProUGUI SFXVolumeValueText;
     [SerializeField] private AudioSource musicAudioSource;
@@ -20,6 +26,8 @@ public class Settings : MonoBehaviour
 
     void Start()
     {
+        musicAudioSource = null;
+        musicAudioSource = GetComponent<AudioSource>();
         musicAudioSource.Play();
         musicVolumeValue = SaveSettings.GetMusicVolume();
         SFXVolumeValue = SaveSettings.GetSFXVolume();
@@ -33,6 +41,8 @@ public class Settings : MonoBehaviour
     {
         isSettingsPanelActive = !isSettingsPanelActive;
         settingsPanel.SetActive(isSettingsPanelActive);
+        menuPanel.SetActive(!isSettingsPanelActive);
+        menuButton.SetActive(!isSettingsPanelActive);
         SaveSettings.SetSFXVolume(SFXVolumeValue);
         SaveSettings.SetMusicVolume(musicVolumeValue);
     }
@@ -81,11 +91,17 @@ public class Settings : MonoBehaviour
 
     void OnEnable()
     {
-        Heist.SetMusicOnHeistStarted += ChangeMusic;
+        heist = FindAnyObjectByType<Heist>();
+        if (heist == null) { return; }
+        heist.SetMusicOnHeistStarted += ChangeMusic;
+        heist.RemoveMusicOnHeistFinished += ChangeMusic;
     }
 
     void OnDisable()
     {
-        Heist.RemoveMusicOnHeistFinished -= ChangeMusic;
+        musicAudioSource = null;
+        if (heist == null) { return; }
+        heist.SetMusicOnHeistStarted -= ChangeMusic;
+        heist.RemoveMusicOnHeistFinished -= ChangeMusic;
     }
 }

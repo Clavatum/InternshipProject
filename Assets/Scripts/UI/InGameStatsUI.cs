@@ -1,7 +1,5 @@
 using TMPro;
-using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class InGameStatsUI : MonoBehaviour
@@ -23,6 +21,7 @@ public class InGameStatsUI : MonoBehaviour
     [SerializeField] private AudioClip endGameSFX;
     [SerializeField] private AudioClip gameWonSFX;
     [SerializeField] private GameObject apartmentButton;
+    public GameObject gameOverPanel;
 
     [SerializeField] private float messageDuration = 2f;
 
@@ -76,12 +75,13 @@ public class InGameStatsUI : MonoBehaviour
         apartmentButtonInteractable.selectEntered.RemoveAllListeners();
         apartmentButtonInteractable.selectEntered.AddListener(zort => teleport.TeleportTo(currentOpenedWindow));
         apartmentButtonInteractable.selectEntered.AddListener(zort => heist.SetHeist());
+        apartmentButtonInteractable.selectEntered.AddListener(zort => ResetOpenedWindowPanel());
 
         feedbackText.gameObject.SetActive(true);
         apartmentButton.SetActive(true);
     }
 
-    public void ResetOpenedWindowPanel()
+    private void ResetOpenedWindowPanel()
     {
         apartmentButton.SetActive(false);
         ClearMessage();
