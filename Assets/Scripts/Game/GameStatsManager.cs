@@ -42,6 +42,7 @@ public class GameStatsManager : MonoBehaviour
 
     public void CalculateCurrentScore()
     {
+        if (gameManager == null) { return; }
         currentScore += gameManager.IsGameOver ? totalCleanedState * PrizeForEachCleanedState : totalCleanedState * PrizeForEachCleanedState + (int)(gameManager.TotalTimeLeft * prizeForTimeLeft);
     }
 
