@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameStatsManager : MonoBehaviour
 {
@@ -14,12 +15,6 @@ public class GameStatsManager : MonoBehaviour
     private int totalScore;
     [HideInInspector] public int currentScore = 0;
     public int PrizeForEachCleanedState { get; private set; } = 100;
-
-
-    void Awake()
-    {
-        gameManager = FindAnyObjectByType<GameManager>();
-    }
 
     void Start()
     {
@@ -45,7 +40,6 @@ public class GameStatsManager : MonoBehaviour
 
     public float GetTotalPlayedTime() => PlayerPrefs.GetFloat("TotalPlayedTime");
 
-
     public void CalculateCurrentScore()
     {
         currentScore += gameManager.IsGameOver ? totalCleanedState * PrizeForEachCleanedState : totalCleanedState * PrizeForEachCleanedState + (int)(gameManager.TotalTimeLeft * prizeForTimeLeft);
@@ -62,5 +56,12 @@ public class GameStatsManager : MonoBehaviour
         SetTotalScore();
     }
 
+    void OnEnable()
+    {
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            gameManager = FindAnyObjectByType<GameManager>();
+        }
+    }
     #endregion
 }
