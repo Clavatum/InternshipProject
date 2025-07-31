@@ -63,6 +63,7 @@ public class InGameStatsUI : MonoBehaviour
     {
         feedbackText.text = "";
         feedbackText.transform.gameObject.SetActive(false);
+        feedbackText.color = Color.white;
     }
 
     private void SetOpenedWindowPanel(OpenedWindowTrigger openedWindowTrigger)

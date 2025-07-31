@@ -27,14 +27,6 @@ public class WindowState : MonoBehaviour
         #endregion
 
         gameStatsManager.totalDirtyWindow++;
-
-        CopyOfMaterialToWorkOn = new Material(MaterialToWorkOn);
-        if (MaterialToWorkOn.HasTexture("_Mask"))
-        {
-            CopyOfMaterialToWorkOn.SetTexture("_Mask", CopyTexture(MaterialToWorkOn.GetTexture("_Mask")));
-            pixels = ((Texture2D)CopyOfMaterialToWorkOn.GetTexture("_Mask")).GetPixels();
-        }
-        meshRenderer.material = CopyOfMaterialToWorkOn;
     }
 
     #region - Texture -
@@ -71,5 +63,16 @@ public class WindowState : MonoBehaviour
     public bool CanUseTool(CleaningTool cleaningTool)
     {
         return cleaningTool.transform.parent.gameObject.name == PermittedToolName;
+    }
+
+    void OnEnable()
+    {
+        CopyOfMaterialToWorkOn = new Material(MaterialToWorkOn);
+        if (MaterialToWorkOn.HasTexture("_Mask"))
+        {
+            CopyOfMaterialToWorkOn.SetTexture("_Mask", CopyTexture(MaterialToWorkOn.GetTexture("_Mask")));
+            pixels = ((Texture2D)CopyOfMaterialToWorkOn.GetTexture("_Mask")).GetPixels();
+        }
+        meshRenderer.material = CopyOfMaterialToWorkOn;
     }
 }
