@@ -11,7 +11,7 @@ public class InGameStatsUI : MonoBehaviour
     private XRSimpleInteractable apartmentButtonInteractable;
 
     [Header("Object References")]
-    [SerializeField] private TextMeshProUGUI feedbackText;
+    public TextMeshProUGUI feedbackText;
     [SerializeField] private TextMeshProUGUI scoreText;
     public TextMeshProUGUI totalTimeLeftText;
     public TextMeshProUGUI heistTimeLeftText;
@@ -59,7 +59,7 @@ public class InGameStatsUI : MonoBehaviour
         timeLeftText.text = $"Time Left: {(int)(timeLeft / 60):D2}:{(int)(timeLeft % 60):D2}";
     }
 
-    private void ClearMessage()
+    public void ClearMessage()
     {
         feedbackText.text = "";
         feedbackText.transform.gameObject.SetActive(false);

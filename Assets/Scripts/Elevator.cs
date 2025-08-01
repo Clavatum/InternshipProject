@@ -8,7 +8,7 @@ public class Elevator : MonoBehaviour
     private bool isMovingHorizontally = false;
     private bool isMovingVertically = false;
 
-    [Header("Boundries")]
+    [Header("Boundaries")]
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
     [SerializeField] private float minY;

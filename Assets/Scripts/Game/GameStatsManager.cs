@@ -16,6 +16,11 @@ public class GameStatsManager : MonoBehaviour
     [HideInInspector] public int currentScore = 0;
     public int PrizeForEachCleanedState { get; private set; } = 100;
 
+
+    void Awake()
+    {
+        gameManager = FindAnyObjectByType<GameManager>();
+    }
     void Start()
     {
         currentScore = 0;
@@ -57,12 +62,12 @@ public class GameStatsManager : MonoBehaviour
         SetTotalScore();
     }
 
-    void OnEnable()
+    /*void OnEnable()
     {
         if (SceneManager.GetActiveScene().buildIndex != 0)
         {
             gameManager = FindAnyObjectByType<GameManager>();
         }
-    }
+    }*/
     #endregion
 }

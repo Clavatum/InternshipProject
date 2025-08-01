@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    [SerializeField] private Transform playerTransformInElevator;
+    public Transform playerTransformInElevator;
 
     public void TeleportTo(OpenedWindowTrigger openedWindowTrigger)
     {

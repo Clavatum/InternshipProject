@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class GameManager : MonoBehaviour
@@ -11,6 +13,16 @@ public class GameManager : MonoBehaviour
     private GameStatsManager gameStatsManager;
     private SceneController sceneController;
     private InGameStatsUI inGameStatsUI;
+    private Teleport teleport;
+    private LeftControllerInputAction leftController;
+
+    [SerializeField] private GameObject player;
+
+    [Header("Player Position Boundaries")]
+    [SerializeField] private float minX;
+    [SerializeField] private float maxX;
+    [SerializeField] private float minY;
+    [SerializeField] private float maxY;
 
     private Animator gameOverAnimator;
 
@@ -26,11 +38,15 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        teleport = FindAnyObjectByType<Teleport>();
         heist = FindAnyObjectByType<Heist>();
         inGameStatsUI = FindAnyObjectByType<InGameStatsUI>();
         gameStatsManager = FindAnyObjectByType<GameStatsManager>();
         sceneController = FindAnyObjectByType<SceneController>();
         gameOverAnimator = inGameStatsUI.gameOverPanel.GetComponent<Animator>();
+        leftController = new LeftControllerInputAction();
+        leftController.LeftController.YButton.performed += e => ReturnToElevator();
+        leftController.Enable();
     }
 
     void Start()
@@ -41,6 +57,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (IsPlayerOutOfBoundaries())
+        {
+            inGameStatsUI.feedbackText.transform.gameObject.SetActive(true);
+            inGameStatsUI.feedbackText.text = "To go back to elevator, press secondary button on left controller";
+        }
+
         if (isGameEndScreenShown) { return; }
         StartTotalTimer();
         StartHeistTimer();
@@ -112,15 +134,18 @@ public class GameManager : MonoBehaviour
         heist.SetHeistTimerOnHeistStarted -= StartHeistTimer;
     }
 
-    void OnTriggerEnter(Collider other)
+    public void ReturnToElevator()
     {
-        if (other.GetComponent<XROrigin>() != null)
-        {
-            DynamicMoveProvider dynamicMoveProvider = other.GetComponent<DynamicMoveProvider>();
-            dynamicMoveProvider.moveSpeed = 0f;
-            inGameStatsUI.GameOverFeedback("You died!");
-            StartCoroutine(ReturnMainMenu());
-        }
+        if (!IsPlayerOutOfBoundaries()) { return; }
+        player.transform.localPosition = teleport.playerTransformInElevator.localPosition;
+        player.transform.localRotation = teleport.playerTransformInElevator.localRotation;
+        inGameStatsUI.ClearMessage();
     }
+
+    private bool IsPlayerOutOfBoundaries()
+    {
+        return player.transform.localPosition.x < minX || player.transform.localPosition.x > maxX || player.transform.localPosition.y < minY || player.transform.localPosition.y > maxY;
+    }
+
     #endregion
 }

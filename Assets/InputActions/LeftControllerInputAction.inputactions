@@ -1,0 +1,34 @@
+{
+    "name": "LeftControllerInputAction",
+    "maps": [
+        {
+            "name": "LeftController",
+            "id": "e02a255c-b80a-47fb-a074-73a2654178b2",
+            "actions": [
+                {
+                    "name": "YButton",
+                    "type": "Button",
+                    "id": "335c308d-05e5-4abf-819e-3c0fd043dc83",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ec04b287-5c42-4912-a7b9-bb4219312c1d",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "YButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
